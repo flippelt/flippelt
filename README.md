@@ -6,6 +6,7 @@ Meu nome é Felipe Lippelt e eu sou um Dev aprendiz focado no desenvolvimento Fu
 ![](https://img.shields.io/badge/Code-Python-informational?style=plastic&logo=python&logoColor=white&color=red)
 ![](https://img.shields.io/badge/Code-React-informational?style=plastic&logo=react&logoColor=white&color=red)
 ![](https://img.shields.io/badge/Code-JavaScript-informational?style=plastic&logo=javascript&logoColor=white&color=yellow)
+![](https://img.shields.io/badge/Code-CSS3-informational?style=plastic&logo=css3&logoColor=white&color=yellow)
 ![](https://img.shields.io/badge/Editor-VSCode-informational?style=plastic&logo=Visual%20Studio%20Code&logoColor=white&color=green)
 
 OBS: Todas as tecnologias e ferramentas estão sendo aprendidas durante o bootcamp
