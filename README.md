@@ -5,7 +5,7 @@ Meu nome é Felipe Lippelt e eu sou um Dev aprendiz focado no desenvolvimento we
 ![](https://img.shields.io/badge/OS-Linux-informational?style=plastic&logo=linux&logoColor=white&color=red)
 ![](https://img.shields.io/badge/Code-Python-informational?style=plastic&logo=python&logoColor=white&color=red)
 ![](https://img.shields.io/badge/Code-JavaScript-informational?style=plastic&logo=javascript&logoColor=white&color=yellow)
-![VSCode](https://img.shields.io/badge/-VSCode-05122A?&logo=Visual%20Studio%20Code&logoColor=007ACC)
+![](https://img.shields.io/badge/Editor-VSCode-informational?style=plastic&logo=Visual%20Studio%20Code&logoColor=white&color=green)
 
 <!-- ![](https://img.shields.io/badge/Shell-Bash-informational?style=plastic&logo=gnu-bash&logoColor=white&color=2bbc8a) -->
 
