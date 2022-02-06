@@ -2,10 +2,12 @@
 Meu nome é Felipe Lippelt e eu sou um Dev aprendiz focado no desenvolvimento web. Sou do Brasil e estou atualmente realizando o bootcamp da Trybe. Você pode me encontrar no [Twitter](https://twitter.com/olippelt),  ou no [LinkedIn](https://www.linkedin.com/in/lippelt-f/).
 
 ## 🔧 Tecnologias e Ferramentas
-![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=python&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=javascript&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Shell-Bash-informational?style=flat&logo=gnu-bash&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/OS-Linux-informational?style=plastic&logo=linux&logoColor=white&color=red)
+![](https://img.shields.io/badge/Code-Python-informational?style=plastic&logo=python&logoColor=white&color=red)
+![](https://img.shields.io/badge/Code-JavaScript-informational?style=plastic&logo=javascript&logoColor=white&color=yellow)
+![VSCode](https://img.shields.io/badge/-VSCode-05122A?&logo=Visual%20Studio%20Code&logoColor=007ACC)
+
+<!-- ![](https://img.shields.io/badge/Shell-Bash-informational?style=plastic&logo=gnu-bash&logoColor=white&color=2bbc8a) -->
 
 ## &#x1f4c8; GitHub Stats
 
