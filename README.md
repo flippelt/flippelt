@@ -1,9 +1,10 @@
 
-Meu nome é Felipe Lippelt e eu sou um Dev aprendiz focado no desenvolvimento web. Sou do Brasil e estou atualmente realizando o bootcamp da Trybe. Você pode me encontrar no [Twitter](https://twitter.com/olippelt),  ou no [LinkedIn](https://www.linkedin.com/in/lippelt-f/).
+Meu nome é Felipe Lippelt e eu sou um Dev aprendiz focado no desenvolvimento FullStack. Sou do Brasil e estou atualmente realizando o bootcamp da <a href="https://www.betrybe.com">Trybe</a>. Você pode me encontrar no [Twitter](https://twitter.com/olippelt), ou no [LinkedIn](https://www.linkedin.com/in/lippelt-f/).
 
 ## 🔧 Tecnologias e Ferramentas
 ![](https://img.shields.io/badge/OS-Linux-informational?style=plastic&logo=linux&logoColor=white&color=red)
 ![](https://img.shields.io/badge/Code-Python-informational?style=plastic&logo=python&logoColor=white&color=red)
+![](https://img.shields.io/badge/Code-React-informational?style=plastic&logo=react&logoColor=white&color=red)
 ![](https://img.shields.io/badge/Code-JavaScript-informational?style=plastic&logo=javascript&logoColor=white&color=yellow)
 ![](https://img.shields.io/badge/Editor-VSCode-informational?style=plastic&logo=Visual%20Studio%20Code&logoColor=white&color=green)
 
