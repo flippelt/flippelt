@@ -7,6 +7,8 @@ Meu nome é Felipe Lippelt e eu sou um Dev aprendiz focado no desenvolvimento we
 ![](https://img.shields.io/badge/Code-JavaScript-informational?style=plastic&logo=javascript&logoColor=white&color=yellow)
 ![](https://img.shields.io/badge/Editor-VSCode-informational?style=plastic&logo=Visual%20Studio%20Code&logoColor=white&color=green)
 
+OBS: Todas as tecnologias e ferramentas estão sendo aprendidas durante o bootcamp
+
 <!-- ![](https://img.shields.io/badge/Shell-Bash-informational?style=plastic&logo=gnu-bash&logoColor=white&color=2bbc8a) -->
 
 ## &#x1f4c8; GitHub Stats
