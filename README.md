@@ -1,5 +1,5 @@
 
-Meu nome é Felipe Lippelt e eu sou um Dev aprendiz focado no desenvolvimento web. Sou do Brasil e estou atualmente realizando o bootcamp da Trybe. Você pode me encontrar no [![Twitter][1.2]][1],  ou no [![LinkedIn][3.2]][3].
+Meu nome é Felipe Lippelt e eu sou um Dev aprendiz focado no desenvolvimento web. Sou do Brasil e estou atualmente realizando o bootcamp da Trybe. Você pode me encontrar no [Twitter](https://twitter.com/olippelt),  ou no [LinkedIn](https://www.linkedin.com/in/lippelt-f/).
 
 ## 🔧 Tecnologias e Ferramentas
 ![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=2bbc8a)
