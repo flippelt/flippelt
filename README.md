@@ -1,49 +1,60 @@
+<h1 align="center">
+     Olá, eu sou Felipe Lippelt 
+     <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/>
+</h1>
 
-Meu nome é Felipe Lippelt e eu sou um Dev aprendiz focado no desenvolvimento FullStack. Sou do Brasil e estou atualmente realizando o bootcamp da <a href="https://www.betrybe.com">Trybe</a>. Você pode me encontrar no [Twitter](https://twitter.com/olippelt), ou no [LinkedIn](https://www.linkedin.com/in/lippelt-f/).
+<h3 align="center"> Bem-Vindes ao meu GitHub! </h3> 
+<p align="center">Meu nome é Felipe Lippelt e Sou iniciante neste mundo de desenvolvedores. Sou do Brasil e estou atualmente realizando o bootcamp da <a href="https://www.betrybe.com">Trybe</a>.</p>
 
-## 🔧 Tecnologias e Ferramentas
-![](https://img.shields.io/badge/OS-Linux-informational?style=plastic&logo=linux&logoColor=white&color=red)
-![](https://img.shields.io/badge/Code-Python-informational?style=plastic&logo=python&logoColor=white&color=red)
-![](https://img.shields.io/badge/Code-React-informational?style=plastic&logo=react&logoColor=white&color=red)
-![](https://img.shields.io/badge/Code-JavaScript-informational?style=plastic&logo=javascript&logoColor=white&color=yellow)
-![](https://img.shields.io/badge/Code-CSS3-informational?style=plastic&logo=css3&logoColor=white&color=yellow)
-![](https://img.shields.io/badge/Editor-VSCode-informational?style=plastic&logo=Visual%20Studio%20Code&logoColor=white&color=green)
+- 🔗 32 anos;
+- 🔗 Residente em São Paulo - Brasil;
+- 🔗 Estudante de Sistemas da Informação em [Uninove](https://www.uninove.br/);
 
-OBS: Todas as tecnologias e ferramentas estão sendo aprendidas durante o bootcamp
+---
 
-<!-- ![](https://img.shields.io/badge/Shell-Bash-informational?style=plastic&logo=gnu-bash&logoColor=white&color=2bbc8a) -->
+<h3> 🛠 Languages & Tools </h3>
 
-## &#x1f4c8; GitHub Stats
+- `Frontend` ![HTML5](https://img.shields.io/badge/-HTML5-05122A?&logo=HTML5)&nbsp;
+             ![CSS3](https://img.shields.io/badge/-CSS3-05122A?&logo=css3&logoColor=007ACC)&nbsp;
+             ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?&logo=JavaScript)&nbsp;
+                     
+- `Backend` ![Node.JS](https://img.shields.io/badge/-Node.JS-05122A?&logo=nodedotjs)&nbsp;
+            ![React](https://img.shields.io/badge/-React-05122A?&logo=react)
+            ![Express](https://img.shields.io/badge/-Express-05122A?&logo=express)&nbsp;
+  
+- `Mobile` ![Dart](https://img.shields.io/badge/-Dart-05122A?&logo=Dart&logoColor=007ACC)
+           ![Flutter](https://img.shields.io/badge/-Flutter-05122A?&logo=Flutter&logoColor=00BFFF)
 
-<!-- <a href="https://github.com/flippelt/flippelt">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=flippelt&hide=java,html,tex&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=3" />
-</a> -->
+
+- `Database` ![MongoDB](https://img.shields.io/badge/-MongoDB-05122A?&logo=mongodb&logoColor=8B0000)&nbsp;
+             ![MySQL](https://img.shields.io/badge/-MySQL-05122A?&logo=MySQL)&nbsp;
+             
+
+- `Tools` ![Windows](https://img.shields.io/badge/-Windows-05122A?&logo=Windows&logoColor=007ACC)&nbsp;
+          ![Linux](https://img.shields.io/badge/-Linux-05122A?&logo=Linux)&nbsp;
+          ![GitHub](https://img.shields.io/badge/-GitHub-05122A?&logo=GitHub)&nbsp;
+          ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
+          ![VSCode](https://img.shields.io/badge/-VSCode-05122A?&logo=visual-studio-code&logoColor=007ACC)&nbsp;
+
+OBS: Todas as linguagens e ferramentas informadas são de breve conhecimento e pequenas experiências com projetos pessoais e atrelados com a universidade e/ou o bootcamp.
+
+---
+
+<h3> 📈 Analytics </h3>
+
+<p align="left">
 <a href="https://github.com/flippelt/flippelt">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=flippelt&show_icons=true&line_height=27&count_private=true&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" alt="Martin's GitHub Stats" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=flippelt&show_icons=true&line_height=27&count_private=true&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" alt="Felipe's GitHub Stats" />
 </a>
+</p>
 
-<!-- links to social media icons -->
+---
 
-<!-- icons with padding -->
+<h3> 📞 Vamos Conversar? </h3>
+<p> Você pode entrar em contato comigo através dos seguintes modos: </p>
 
-[1.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
-[2.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)
-
-<!-- icons without padding -->
-
-[1.2]: http://i.imgur.com/wWzX9uB.png (twitter icon without padding)
-[2.2]: http://i.imgur.com/9I6NRUm.png (github icon without padding)
-<!-- links to your social media accounts -->
-
-[1]: https://twitter.com/olippelt
-[2]: https://github.com/flippelt
-[3]: https://www.linkedin.com/in/lippelt-f/
-
-
-<!-- Resources -->
-<!-- Icons: https://simpleicons.org/ -->
-<!-- GitHub Stats: https://github.com/anuraghazra/github-readme-stats -->
-<!-- Emojis: https://emojipedia.org/emoji/ -->
-<!-- HTML Emojis: https://www.fileformat.info/index.htm -->
-<!-- Shields: https://shields.io/ -->
-<!-- Awesome GitHub Profile README: https://github.com/abhisheknaiidu/awesome-github-profile-readme -->
+<p align="left">
+     <a href="lippelt.f@gmail.com"><img src="https://img.shields.io/badge/-Gmail-EA4335?&logo=Gmail&logoColor=FFFFFF"/></a>
+     <a href="https://www.twitter.com/olippelt"><img src="https://img.shields.io/badge/-Twitter-00ACEE?&logo=Twitter&logoColor=FFFFFF"/></a>
+     <a href="https://www.linkedin.com/in/flippelt/"><img src="https://img.shields.io/badge/-Linkedln-0A66C2?&logo=Linkedin&logoColor=FFFFFF"/></a>
+</p>
