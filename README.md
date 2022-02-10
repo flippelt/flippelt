@@ -45,7 +45,7 @@ OBS: Todas as linguagens e ferramentas informadas são de breve conhecimento e p
 <p align="left">
 <a href="https://github.com/flippelt/flippelt">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=flippelt&show_icons=true&theme=nord" alt="Felipe's GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=flippelt&hide=scss&layout=compact&theme=nord"/>
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=flippelt&hide=scss&theme=nord"/>
 </a>
 </p>
 
