@@ -4,7 +4,7 @@
 </h1>
 
 <h3 align="center"> Bem-Vindes ao meu GitHub! </h3> 
-<p align="center">Meu nome é Felipe Lippelt e Sou iniciante neste mundo de desenvolvedores. Sou do Brasil e estou atualmente realizando o bootcamp da <a href="https://www.betrybe.com">Trybe</a>.</p>
+<p align="center">Meu nome é Felipe Lippelt e sou iniciante neste mundo de desenvolvedores. Sou do Brasil e estou atualmente realizando o bootcamp da <a href="https://www.betrybe.com">Trybe</a>.</p>
 
 - 🔗 32 anos;
 - 🔗 Residente em São Paulo - Brasil;
