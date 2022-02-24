@@ -55,7 +55,7 @@ OBS: Todas as linguagens e ferramentas informadas são de breve conhecimento e p
 <p> Você pode entrar em contato comigo através dos seguintes modos: </p>
 
 <p align="left">
-     <a href="mailto:lippelt.f@gmail.com"><img src="https://img.shields.io/badge/-Gmail-EA4335?&logo=Gmail&logoColor=FFFFFF"/></a>
-     <a href="https://www.twitter.com/olippelt"><img src="https://img.shields.io/badge/-Twitter-00ACEE?&logo=Twitter&logoColor=FFFFFF"/></a>
-     <a href="https://www.linkedin.com/in/flippelt/"><img src="https://img.shields.io/badge/-Linkedln-0A66C2?&logo=Linkedin&logoColor=FFFFFF"/></a>
+     <a href="mailto:lippelt.f@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Gmail-EA4335?&logo=Gmail&logoColor=FFFFFF"/></a>
+     <a href="https://www.twitter.com/olippelt" target="_blank"><img src="https://img.shields.io/badge/-Twitter-00ACEE?&logo=Twitter&logoColor=FFFFFF"/></a>
+     <a href="https://www.linkedin.com/in/flippelt/" target="_blank"><img src="https://img.shields.io/badge/-Linkedln-0A66C2?&logo=Linkedin&logoColor=FFFFFF"/></a>
 </p>
