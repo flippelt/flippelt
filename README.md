@@ -8,7 +8,7 @@
 
 - 🔗 32 anos;
 - 🔗 Residente em São Paulo - Brasil;
-- 🔗 Estudante de Sistemas da Informação em [Uninove](https://www.uninove.br/);
+- 🔗 Estudante de Análise e Desenvolimento de Sistemas na [Uninove](https://www.uninove.br/);
 
 ---
 
