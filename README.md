@@ -17,9 +17,9 @@
 - `Frontend` ![HTML5](https://img.shields.io/badge/-HTML5-05122A?&logo=HTML5)&nbsp;
              ![CSS3](https://img.shields.io/badge/-CSS3-05122A?&logo=css3&logoColor=007ACC)&nbsp;
              ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?&logo=JavaScript)&nbsp;
+             ![React](https://img.shields.io/badge/-React-05122A?&logo=react)
                      
 - `Backend` ![Node.JS](https://img.shields.io/badge/-Node.JS-05122A?&logo=nodedotjs)&nbsp;
-            ![React](https://img.shields.io/badge/-React-05122A?&logo=react)
             ![Express](https://img.shields.io/badge/-Express-05122A?&logo=express)&nbsp;
   
 - `Mobile` ![Dart](https://img.shields.io/badge/-Dart-05122A?&logo=Dart&logoColor=007ACC)
