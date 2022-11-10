@@ -60,4 +60,4 @@ OBS: Todas as linguagens e ferramentas informadas são de breve conhecimento e p
      <a href="https://www.linkedin.com/in/flippelt/" target="_blank"><img src="https://img.shields.io/badge/-Linkedln-0A66C2?&logo=Linkedin&logoColor=FFFFFF"/></a>
 </p>
 
-<!-- Teste SSH MAC -->
+<!-- [!Snake Animation](https://github.com/flippelt/flippelt/blob/output/github-contribution-grid-snake.svg) -->
