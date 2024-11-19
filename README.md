@@ -6,7 +6,7 @@
 <h3 align="center"> Bem-Vindes ao meu GitHub! </h3> 
 <p align="center">Meu nome é Felipe Lippelt e sou iniciante neste mundo de desenvolvedores.</p>
 
-- 🔗 34 anos;
+- 🔗 35 anos;
 - 🔗 Residente em São Paulo - Brasil;
 
 ---
@@ -35,7 +35,7 @@
           ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
           ![VSCode](https://img.shields.io/badge/-VSCode-05122A?&logo=visual-studio-code&logoColor=007ACC)&nbsp;
 
-OBS: Todas as linguagens e ferramentas informadas são de breve conhecimento e pequenas experiências com projetos pessoais e atrelados com a universidade e/ou o bootcamp.
+OBS: Todas as linguagens e ferramentas informadas são de breve conhecimento e pequenas experiências com projetos pessoais e atrelados com a universidade e outros cursos.
 
 ---
 
