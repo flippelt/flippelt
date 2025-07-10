@@ -6,7 +6,7 @@
 <h3 align="center"> Bem-Vindes ao meu GitHub! </h3> 
 <p align="center">Meu nome é Felipe Lippelt e sou iniciante neste mundo de desenvolvedores.</p>
 
-- 🔗 35 anos;
+- 🔗 36 anos;
 - 🔗 Residente em São Paulo - Brasil;
 
 ---
