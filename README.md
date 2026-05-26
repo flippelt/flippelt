@@ -43,8 +43,7 @@ OBS: Todas as linguagens e ferramentas informadas são de breve conhecimento e p
 
 <p align="left">
 <a href="https://github.com/flippelt/flippelt">
-  <img height="160em" align="center" src="https://github-readme-stats.vercel.app/api?username=flippelt&show_icons=true&theme=nord" alt="Felipe's GitHub Stats" />
-  <img height="160em" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=flippelt&hide=scss&theme=nord"/>
+  <img height="160em" align="center" src="https://github-stats-extended.vercel.app/api?username=flippelt&rank_icon=github&custom_title=Coda%20y%20Coda&include_all_commits=true&theme=github_dark" alt="Felipe's GitHub Stats" />
 </a>
 </p>
 
