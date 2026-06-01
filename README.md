@@ -33,8 +33,8 @@
 <h3>📈 GitHub</h3>
 
 <p align="left">
-  <img height="160em" align="center" src="https://github-readme-stats.vercel.app/api?username=flippelt&include_all_commits=true&show_icons=true&theme=github_dark&hide_border=true&custom_title=Estat%C3%ADsticas" alt="Estatísticas do GitHub de Felipe" />
-  <img height="160em" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=flippelt&layout=compact&theme=github_dark&hide_border=true" alt="Linguagens mais usadas" />
+  <img height="160em" align="center" src="https://github-stats-extended.vercel.app/api?username=flippelt&include_all_commits=true&show_icons=true&rank_icon=github&theme=github_dark&hide_border=true&custom_title=Estat%C3%ADsticas" alt="Estatísticas do GitHub de Felipe" />
+  <img height="160em" align="center" src="https://github-stats-extended.vercel.app/api/top-langs/?username=flippelt&layout=compact&theme=github_dark&hide_border=true" alt="Linguagens mais usadas" />
 </p>
 
 ---
