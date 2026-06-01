@@ -1,62 +1,57 @@
 <h1 align="center">
-     Olá, eu sou Felipe Lippelt 
-     <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/>
+  Olá, eu sou Felipe Lippelt
+  <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/>
 </h1>
 
-<h3 align="center"> Bem-Vindes ao meu GitHub! </h3> 
-<p align="center">Meu nome é Felipe Lippelt e sou iniciante neste mundo de desenvolvedores.</p>
-
-- 🔗 37 anos;
-- 🔗 Residente em São Paulo - Brasil;
-
----
-
-<h3> 🛠 Languages & Tools </h3>
-
-- `Frontend` ![HTML5](https://img.shields.io/badge/-HTML5-05122A?&logo=HTML5)&nbsp;
-             ![CSS3](https://img.shields.io/badge/-CSS3-05122A?&logo=css3&logoColor=007ACC)&nbsp;
-             ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?&logo=JavaScript)&nbsp;
-             ![React](https://img.shields.io/badge/-React-05122A?&logo=react)
-                     
-- `Backend` ![Node.JS](https://img.shields.io/badge/-Node.JS-05122A?&logo=nodedotjs)&nbsp;
-            ![Express](https://img.shields.io/badge/-Express-05122A?&logo=express)&nbsp;
-  
-- `Mobile` ![Dart](https://img.shields.io/badge/-Dart-05122A?&logo=Dart&logoColor=007ACC)
-           ![Flutter](https://img.shields.io/badge/-Flutter-05122A?&logo=Flutter&logoColor=00BFFF)
-
-
-- `Database` ![MongoDB](https://img.shields.io/badge/-MongoDB-05122A?&logo=mongodb&logoColor=8B0000)&nbsp;
-             ![MySQL](https://img.shields.io/badge/-MySQL-05122A?&logo=MySQL)&nbsp;
-             
-
-- `Tools` ![Windows](https://img.shields.io/badge/-Windows-05122A?&logo=Windows&logoColor=007ACC)&nbsp;
-          ![Linux](https://img.shields.io/badge/-Linux-05122A?&logo=Linux)&nbsp;
-          ![GitHub](https://img.shields.io/badge/-GitHub-05122A?&logo=GitHub)&nbsp;
-          ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
-          ![VSCode](https://img.shields.io/badge/-VSCode-05122A?&logo=visual-studio-code&logoColor=007ACC)&nbsp;
-
-OBS: Todas as linguagens e ferramentas informadas são de breve conhecimento e pequenas experiências com projetos pessoais e atrelados com a universidade e outros cursos.
-
----
-
-<h3> 📈 Analytics </h3>
-
-<p align="left">
-<a href="https://github.com/flippelt/flippelt">
-  <img height="160em" align="center" src="https://github-stats-extended.vercel.app/api?username=flippelt&rank_icon=github&custom_title=Coda%20y%20Coda&include_all_commits=true&theme=github_dark" alt="Felipe's GitHub Stats" />
-</a>
+<p align="center">
+  Desenvolvedor em formação · construindo projetos web com React, Node.js e Astro<br/>
+  📍 São Paulo, Brasil 🇧🇷
 </p>
 
 ---
 
-<h3> 📞 Vamos Conversar? </h3>
-<p> Você pode entrar em contato comigo através dos seguintes modos: </p>
+<h3>🛠 Stack & Ferramentas</h3>
 
-<p align="left">
-     <a href="mailto:lippelt.f@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Gmail-EA4335?&logo=Gmail&logoColor=FFFFFF"/></a>
-     <a href="https://www.twitter.com/olippelt" target="_blank"><img src="https://img.shields.io/badge/-Twitter-00ACEE?&logo=Twitter&logoColor=FFFFFF"/></a>
-     <a href="https://www.linkedin.com/in/flippelt/" target="_blank"><img src="https://img.shields.io/badge/-Linkedln-0A66C2?&logo=Linkedin&logoColor=FFFFFF"/></a>
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,express,astro" /><br/>
+  <img src="https://skillicons.dev/icons?i=dart,flutter,mongodb,mysql" /><br/>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,linux,windows" />
 </p>
 
-<!-- [!Snake Animation](https://github.com/flippelt/flippelt/blob/output/github-contribution-grid-snake.svg) -->
-<!-- Teste SSH Windows -->
+> Tecnologias que venho aprendendo e aplicando em projetos pessoais, acadêmicos e cursos.
+
+---
+
+<h3>🚀 Projetos em destaque</h3>
+
+- **[Immersive Terminal for RPGs](https://github.com/flippelt/Immersive-Terminal-for-RPGs)** — Terminal CRT retrô como prop para RPGs de mesa. `React` + `Vite`, com sistemas trocáveis e cenários autorais do mestre.
+
+- **[Campaign Codex](https://github.com/flippelt/campaign-codex)** — Wiki estático para campanhas de RPG feito em `Astro`: lore, mapas, NPCs e personagens. Multi-tema e responsivo.
+
+---
+
+<h3>📈 GitHub</h3>
+
+<p align="left">
+  <img height="160em" align="center" src="https://github-readme-stats.vercel.app/api?username=flippelt&include_all_commits=true&show_icons=true&theme=github_dark&hide_border=true&custom_title=Estat%C3%ADsticas" alt="Estatísticas do GitHub de Felipe" />
+  <img height="160em" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=flippelt&layout=compact&theme=github_dark&hide_border=true" alt="Linguagens mais usadas" />
+</p>
+
+---
+
+<h3>🐍 Contribuições</h3>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake.svg" />
+  <img alt="Snake animation do meu gráfico de contribuições" src="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake.svg" />
+</picture>
+
+---
+
+<h3>📫 Vamos conversar?</h3>
+
+<p align="left">
+  <a href="mailto:lippelt.f@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=FFFFFF"/></a>
+  <a href="https://www.linkedin.com/in/flippelt/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=Linkedin&logoColor=FFFFFF"/></a>
+</p>
