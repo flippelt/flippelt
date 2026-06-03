@@ -24,6 +24,10 @@
 
 <h3>🚀 Projetos em destaque</h3>
 
+- **[GM Control Room](https://github.com/flippelt/gm-control-room)** — Painel de mestre de RPG em tempo real: controla a tela dos jogadores (cenas, áudio, Spotify, dados, tracker de combate) pela rede local. `React` + `Node` + `Socket.io`, com testes e CI.
+
+- **[rpg-prop-kit](https://github.com/flippelt/rpg-prop-kit)** — Biblioteca de componentes React (CRT retrô) publicada no [npm](https://www.npmjs.com/package/rpg-prop-kit). `TypeScript`, build em modo library com tipos.
+
 - **[Immersive Terminal for RPGs](https://github.com/flippelt/Immersive-Terminal-for-RPGs)** — Terminal CRT retrô como prop para RPGs de mesa. `React` + `Vite`, com sistemas trocáveis e cenários autorais do mestre.
 
 - **[Campaign Codex](https://github.com/flippelt/campaign-codex)** — Wiki estático para campanhas de RPG feito em `Astro`: lore, mapas, NPCs e personagens. Multi-tema e responsivo.
