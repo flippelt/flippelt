@@ -24,6 +24,8 @@
 
 <h3>🚀 Projetos em destaque</h3>
 
+- **[scenario-forge](https://github.com/flippelt/scenario-forge)** — Editor desktop (Win/macOS/Linux) para criar cenários do Immersive Terminal: árvore de arquivos, flags de jogo (crack/tracer/lock), diálogo e eventos por formulário, validação e **preview ao vivo** no terminal real embutido. Exporta pasta versionável, bundle ou link. `Tauri 2 (Rust)` + `React` + `Vite` + `TypeScript`.
+
 - **[GM Control Room](https://github.com/flippelt/gm-control-room)** — Painel de mestre de RPG em tempo real: cenas adaptativas (typewriter, pergaminho, terminal CRT), iluminação/clima, mixer de áudio, Spotify, dados, tracker de combate e histórico de rolagens — tudo sincronizado via WebSocket. Tela dos jogadores instalável como PWA. Suporta 6 sistemas (D&D, Lancer, GUMSHOE, Daggerheart, Candela Obscura) via `@lippelt/srd-*`. `React` + `Node` + `Socket.io` + `TypeScript`.
 
 - **[gmcr-srd-systems](https://github.com/flippelt/gmcr-srd-systems)** — Monorepo de regras SRD pra sistemas de RPG, [publicado no npm](https://www.npmjs.com/package/@lippelt/srd-core) como `@lippelt/srd-*`. Cada sistema é um pacote independente (dice presets, conditions, tracker fields, regras automatizadas). 6 sistemas implementados. `TypeScript` + `tsup` + `Vitest` + `npm workspaces` + CI tag-release.
@@ -31,6 +33,8 @@
 - **[rpg-prop-kit](https://github.com/flippelt/rpg-prop-kit)** — Biblioteca de componentes React (CRT retrô) publicada no [npm](https://www.npmjs.com/package/rpg-prop-kit). `TypeScript`, build em modo library com tipos.
 
 - **[Immersive Terminal for RPGs](https://github.com/flippelt/Immersive-Terminal-for-RPGs)** — Terminal CRT retrô como prop para RPGs de mesa. `React` + `Vite`, com sistemas trocáveis e cenários autorais do mestre.
+
+- **[rpgterm-engine](https://www.npmjs.com/package/rpgterm-engine)** — Motor de lógica do Immersive Terminal extraído e [publicado no npm](https://www.npmjs.com/package/rpgterm-engine): VFS, interpretador de comandos, crack/tracer/decrypt e composição de cenários, sem DOM. Fonte única consumida pelo terminal e pelo scenario-forge — sem divergência de schema.
 
 - **[Campaign Codex](https://github.com/flippelt/campaign-codex)** — Wiki estático para campanhas de RPG feito em `Astro`: lore, mapas, NPCs e personagens. Multi-tema e responsivo.
 
