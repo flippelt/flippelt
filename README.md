@@ -13,9 +13,9 @@
 <h3>🛠 Stack & Ferramentas</h3>
 
 <p>
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,express,astro" /><br/>
-  <img src="https://skillicons.dev/icons?i=dart,flutter,mongodb,mysql" /><br/>
-  <img src="https://skillicons.dev/icons?i=git,github,vscode,linux,windows" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nodejs,express,astro" /><br/>
+  <img src="https://skillicons.dev/icons?i=rust,py,dart,flutter,mongodb,mysql" /><br/>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,linux,windows,apple" />
 </p>
 
 > Tecnologias que venho aprendendo e aplicando em projetos pessoais, acadêmicos e cursos.
