@@ -38,6 +38,8 @@
 
 - **[Campaign Codex](https://github.com/flippelt/campaign-codex)** — Wiki estático para campanhas de RPG feito em `Astro`: lore, mapas, NPCs e personagens. Multi-tema e responsivo.
 
+- **[Guild Briefings](https://github.com/flippelt/guild-briefings)** — Dossiê diegético da party de RPG de fantasia para a 2ª tela da mesa: cartazes de "procurado" dos personagens, quests em pergaminho com carimbo e **selo de cera** assinados pelo contratante, crônicas e divisão em *parties*. Importa fichas do **D&D Beyond** (JSON) ou manual. PWA instalável, com [demo ao vivo](https://flippelt.github.io/guild-briefings/). `React` + `Vite` + `TypeScript` + `PWA`.
+
 ---
 
 <h3>📈 GitHub</h3>
