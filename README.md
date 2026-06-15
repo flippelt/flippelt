@@ -6,7 +6,6 @@
 <p align="center">
   Desenvolvedor em formação · construindo projetos web com React, Node.js e Astro<br/>
   📍 São Paulo, Brasil 🇧🇷<br/>
-  🌐 <a href="https://flippelt.github.io">Portfolio</a>
 </p>
 
 ---
