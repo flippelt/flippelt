@@ -5,7 +5,8 @@
 
 <p align="center">
   Desenvolvedor em formação · construindo projetos web com React, Node.js e Astro<br/>
-  📍 São Paulo, Brasil 🇧🇷
+  📍 São Paulo, Brasil 🇧🇷<br/>
+  🌐 <a href="https://flippelt.github.io">Portfolio</a>
 </p>
 
 ---
@@ -33,6 +34,8 @@
 - **[Campaign Codex](https://github.com/flippelt/campaign-codex)** — Wiki estático para campanhas de RPG feito em `Astro`: lore, mapas, NPCs e personagens. Multi-tema e responsivo.
 
 - **[Guild Briefings](https://github.com/flippelt/guild-briefings)** — Dossiê diegético da party de RPG de fantasia para a 2ª tela da mesa: cartazes de "procurado" dos personagens, quests em pergaminho com carimbo e **selo de cera** assinados pelo contratante, crônicas e divisão em *parties*. Importa fichas do **D&D Beyond** (JSON) ou manual. PWA instalável, com [demo ao vivo](https://flippelt.github.io/guild-briefings/). `React` + `Vite` + `TypeScript` + `PWA`.
+
+- **[An Abundance of Apocrypha (Foundry VTT)](https://github.com/flippelt/WnG-Apocrypha-FoundryVTT)** — Módulo para **Foundry VTT** (v11–v14) que adapta o conteúdo homebrew *An Abundance of Apocrypha*, de Nathan Dowdell, para o sistema **Wrath & Glory** (Cubicle 7) — com permissão do autor. Compêndios com 181 archetypes, 401 armas, 313 abilities, 64 stat blocks de NPC e 173 journals, mantidos como fonte **YAML** editável e compilados em **LevelDB** via Foundry CLI, com release automatizado pela Package Release API. `JavaScript` + `Foundry VTT` + `LevelDB`.
 
 <h3>📦 Pacotes (npm)</h3>
 
@@ -66,6 +69,7 @@
 <h3>📫 Vamos conversar?</h3>
 
 <p align="left">
+  <a href="https://flippelt.github.io" target="_blank"><img src="https://img.shields.io/badge/-Portfolio-222222?style=for-the-badge&logo=githubpages&logoColor=FFFFFF"/></a>
   <a href="mailto:lippelt.f@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=FFFFFF"/></a>
   <a href="https://www.linkedin.com/in/flippelt/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=Linkedin&logoColor=FFFFFF"/></a>
 </p>
