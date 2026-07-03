@@ -57,13 +57,25 @@
 
 ---
 
-<h3>🐍 Contribuições</h3>
+<h3>👾 Contribuições</h3>
 
+<!-- Pac-Man comendo o gráfico de contribuições — gerado pelo job `pacman` em .github/workflows/snake.yml (branch output-pacman). -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output-pacman/pacman-contribution-graph-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output-pacman/pacman-contribution-graph.svg" />
+  <img alt="Pac-Man comendo meu gráfico de contribuições" src="https://raw.githubusercontent.com/flippelt/flippelt/output-pacman/pacman-contribution-graph.svg" />
+</picture>
+
+<!--
+  🐍 COBRINHA (laranja) — DESATIVADA. Para trazê-la de volta, descomente o <picture> abaixo.
+  (Opcional: também dá pra remover o bloco do Pac-Man acima e trocar o título 👾 por 🐍.)
+  O SVG continua sendo gerado pelo workflow (branch `output`), então está sempre atualizado.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake.svg" />
   <img alt="Snake animation do meu gráfico de contribuições" src="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake.svg" />
 </picture>
+-->
 
 ---
 

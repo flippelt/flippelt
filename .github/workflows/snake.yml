@@ -1,4 +1,4 @@
-name: Generate Snake Animation
+name: Generate README assets
 
 on:
   schedule:
@@ -9,18 +9,42 @@ on:
       - main
 
 jobs:
-  generate:
+  # 👾 Pac-Man comendo o gráfico de contribuições -> branch output-pacman
+  pacman:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       contents: write
     steps:
-      - name: Generate snake SVG
+      - name: Generate pacman assets
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: ${{ github.repository_owner }}
+
+      - name: Push to output-pacman branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output-pacman
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # 🐍 Cobrinha (laranja) -> branch output
+  # Continua rodando mesmo com o bloco comentado no README, pra manter o SVG
+  # atualizado caso a cobrinha seja reativada.
+  snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Generate snake SVG (orange)
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg?color_snake=orange
+            dist/github-contribution-grid-snake-dark.svg?color_snake=orange&palette=github-dark
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
