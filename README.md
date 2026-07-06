@@ -1,15 +1,24 @@
-<h1 align="center">
-  Olá, eu sou Felipe Lippelt
-  <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/>
-</h1>
-
 <p align="center">
-  Desenvolvedor em formação · construindo projetos web com React, Node.js e Astro<br/>
-  📍 São Paulo, Brasil 🇧🇷<br/>
+  <img src="assets/boot.svg" alt="$ whoami → felipe_lippelt · $ ./boot.sh → POST passed, mount /dev/felipe ready, load stack typescript rust node done, init rpg-tooling engines online, system ready ▸ bem-vindo(a)!" width="640"/>
 </p>
+
+<p align="center"><em>
+  dev em formação · helpdesk @ <a href="https://icl.com.br">ICL</a> · 📍 São Paulo, BR 🇧🇷
+</em></p>
+
+```typescript
+const felipe: Dev = {
+  pronomes: "ele/dele",
+  code: ["TypeScript", "JavaScript", "Rust", "Python", "Dart"],
+  tools: ["React", "Node.js", "Astro", "Tauri", "Vite", "Socket.io"],
+  focus: "ferramentas para RPG de mesa — VTTs, props imersivos e SRDs em código",
+  aprendendo: "Rust + design de sistemas de RPG",
+};
+```
 
 ---
 
+<!--
 <h3>🛠 Stack & Ferramentas</h3>
 
 <p>
@@ -21,7 +30,9 @@
 > Tecnologias que venho aprendendo e aplicando em projetos pessoais, acadêmicos e cursos.
 
 ---
+-->
 
+<!--
 <h3>🚀 Projetos</h3>
 
 - **[GM Control Room](https://github.com/flippelt/gm-control-room)** — Painel de mestre de RPG em tempo real: cenas adaptativas (typewriter, pergaminho, terminal CRT), iluminação/clima, mixer de áudio, Spotify, dados, tracker de combate e histórico de rolagens — tudo sincronizado via WebSocket. Tela dos jogadores instalável como PWA. Suporta 11 sistemas (D&D 3.5/5e 2014/5e 2024, Pathfinder 1e/2e, Starfinder 1e/2e, Lancer, GUMSHOE, Daggerheart, Candela Obscura) via `@lippelt/srd-*`. `React` + `Node` + `Socket.io` + `TypeScript`.
@@ -45,8 +56,7 @@
 - **[rpg-prop-kit](https://github.com/flippelt/rpg-prop-kit)** — Biblioteca de componentes React (CRT retrô) publicada no [npm](https://www.npmjs.com/package/rpg-prop-kit). `TypeScript`, build em modo library com tipos.
 
 - **[rpgterm-engine](https://www.npmjs.com/package/rpgterm-engine)** — Motor de lógica do Immersive Terminal extraído e [publicado no npm](https://www.npmjs.com/package/rpgterm-engine): VFS, interpretador de comandos, crack/tracer/decrypt e composição de cenários, sem DOM. Fonte única consumida pelo terminal e pelo Scenario Forge — sem divergência de schema.
-
----
+-->
 
 <h3>📈 GitHub</h3>
 
@@ -66,10 +76,7 @@
   <img alt="Pac-Man comendo meu gráfico de contribuições" src="https://raw.githubusercontent.com/flippelt/flippelt/output-pacman/pacman-contribution-graph.svg" />
 </picture>
 
-<!--
-  🐍 COBRINHA (laranja) — DESATIVADA. Para trazê-la de volta, descomente o <picture> abaixo.
-  (Opcional: também dá pra remover o bloco do Pac-Man acima e trocar o título 👾 por 🐍.)
-  O SVG continua sendo gerado pelo workflow (branch `output`), então está sempre atualizado.
+<!-- 🐍 Cobrinha (laranja) DESATIVADA — pra reativar, descomente o <picture> abaixo e troque o título 👾 por 🐍. O SVG segue sendo gerado pelo workflow (branch output), então está sempre atualizado.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake.svg" />
