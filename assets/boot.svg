@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" role="img" aria-label="Sequência de boot: whoami felipe_lippelt; ./boot.sh — POST passed, mount /dev/felipe ready, load stack typescript rust node done, init rpg-tooling engines online, system ready, bem-vindo(a)!">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 512" width="780" height="512" role="img" aria-label="Terminal: $ whoami → felipe_lippelt; $ ./boot.sh → POST passed, mount /dev/felipe ready, load stack typescript rust node done, init rpg-tooling engines online, system ready ▸ bem-vindo(a)!; $ cat felipe.ts → const felipe: Dev = { pronomes: ele/dele, code: TypeScript JavaScript Rust Python Dart, tools: React Node.js Astro Tauri Vite Socket.io, focus: ferramentas para RPG de mesa, aprendendo: Rust + design de sistemas de RPG }">
   <defs>
     <style>
-      .term { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 15px; }
+      .term { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 14px; }
       .prompt { fill: #3fb950; }
       .cmd    { fill: #c9d1d9; }
       .user   { fill: #58a6ff; }
@@ -9,31 +9,46 @@
       .mid    { fill: #8b949e; }
       .val    { fill: #58a6ff; }
       .ready  { fill: #f0b429; }
+      .kw     { fill: #ff7b72; }
+      .var    { fill: #c9d1d9; }
+      .type   { fill: #ffa657; }
+      .key    { fill: #79c0ff; }
+      .str    { fill: #a5d6ff; }
+      .punc   { fill: #8b949e; }
       .ln     { opacity: 1; animation: appear .4s ease both; }
-      .cursor { fill: #c9d1d9; opacity: 1; animation: appear .1s linear 3.1s both, blink 1.05s step-end 3.2s infinite; }
+      .cursor { fill: #c9d1d9; opacity: 1; animation: appear .1s linear 5.1s both, blink 1.05s step-end 5.2s infinite; }
       @keyframes appear { from { opacity: 0 } to { opacity: 1 } }
       @keyframes blink  { 50% { opacity: 0 } }
     </style>
   </defs>
 
-  <rect x="1" y="1" width="718" height="298" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
-  <line x1="1" y1="40" x2="719" y2="40" stroke="#30363d" stroke-width="1"/>
+  <rect x="1" y="1" width="778" height="510" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="1" y1="40" x2="779" y2="40" stroke="#30363d" stroke-width="1"/>
   <circle cx="24" cy="20.5" r="6" fill="#ff5f56"/>
   <circle cx="44" cy="20.5" r="6" fill="#ffbd2e"/>
   <circle cx="64" cy="20.5" r="6" fill="#27c93f"/>
-  <text x="360" y="25" text-anchor="middle" class="term" fill="#6e7681" font-size="13">felipe@github ~ /profile</text>
+  <text x="390" y="25" text-anchor="middle" class="term" fill="#6e7681" font-size="13">felipe@github ~ /profile</text>
 
   <g class="term" xml:space="preserve">
-    <text x="24" y="76"  class="ln" style="animation-delay:.15s"><tspan class="prompt">$ </tspan><tspan class="cmd">whoami</tspan></text>
-    <text x="24" y="102" class="ln" style="animation-delay:.5s"><tspan class="user">felipe_lippelt</tspan></text>
+    <text x="24" y="72"  class="ln" style="animation-delay:.15s"><tspan class="prompt">$ </tspan><tspan class="cmd">whoami</tspan></text>
+    <text x="24" y="96"  class="ln" style="animation-delay:.5s"><tspan class="user">felipe_lippelt</tspan></text>
 
-    <text x="24" y="142" class="ln" style="animation-delay:1s"><tspan class="prompt">$ </tspan><tspan class="cmd">./boot.sh</tspan></text>
-    <text x="24" y="168" class="ln" style="animation-delay:1.35s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  POST .............................. </tspan><tspan class="val">passed</tspan></text>
-    <text x="24" y="194" class="ln" style="animation-delay:1.7s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  mount /dev/felipe ................. </tspan><tspan class="val">ready</tspan></text>
-    <text x="24" y="220" class="ln" style="animation-delay:2.05s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  load stack: typescript rust node .. </tspan><tspan class="val">done</tspan></text>
-    <text x="24" y="246" class="ln" style="animation-delay:2.4s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  init rpg-tooling engines .......... </tspan><tspan class="val">online</tspan></text>
-    <text x="24" y="272" class="ln" style="animation-delay:2.75s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  system ready ▸ </tspan><tspan class="ready">bem-vindo(a)! 🕶️</tspan></text>
+    <text x="24" y="144" class="ln" style="animation-delay:1s"><tspan class="prompt">$ </tspan><tspan class="cmd">./boot.sh</tspan></text>
+    <text x="24" y="168" class="ln" style="animation-delay:1.3s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  POST .............................. </tspan><tspan class="val">passed</tspan></text>
+    <text x="24" y="192" class="ln" style="animation-delay:1.6s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  mount /dev/felipe ................. </tspan><tspan class="val">ready</tspan></text>
+    <text x="24" y="216" class="ln" style="animation-delay:1.9s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  load stack: typescript rust node .. </tspan><tspan class="val">done</tspan></text>
+    <text x="24" y="240" class="ln" style="animation-delay:2.2s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  init rpg-tooling engines .......... </tspan><tspan class="val">online</tspan></text>
+    <text x="24" y="264" class="ln" style="animation-delay:2.5s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  system ready ▸ </tspan><tspan class="ready">bem-vindo(a)! 🕶️</tspan></text>
+
+    <text x="24" y="312" class="ln" style="animation-delay:3s"><tspan class="prompt">$ </tspan><tspan class="cmd">cat felipe.ts</tspan></text>
+    <text x="24" y="336" class="ln" style="animation-delay:3.3s"><tspan class="kw">const </tspan><tspan class="var">felipe</tspan><tspan class="punc">: </tspan><tspan class="type">Dev</tspan><tspan class="punc"> = {</tspan></text>
+    <text x="24" y="360" class="ln" style="animation-delay:3.55s"><tspan class="key">&#160;&#160;pronomes</tspan><tspan class="punc">: </tspan><tspan class="str">"ele/dele"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="384" class="ln" style="animation-delay:3.8s"><tspan class="key">&#160;&#160;code</tspan><tspan class="punc">: [</tspan><tspan class="str">"TypeScript", "JavaScript", "Rust", "Python", "Dart"</tspan><tspan class="punc">],</tspan></text>
+    <text x="24" y="408" class="ln" style="animation-delay:4.05s"><tspan class="key">&#160;&#160;tools</tspan><tspan class="punc">: [</tspan><tspan class="str">"React", "Node.js", "Astro", "Tauri", "Vite", "Socket.io"</tspan><tspan class="punc">],</tspan></text>
+    <text x="24" y="432" class="ln" style="animation-delay:4.3s"><tspan class="key">&#160;&#160;focus</tspan><tspan class="punc">: </tspan><tspan class="str">"ferramentas para RPG de mesa — VTTs, props imersivos e SRDs em código"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="456" class="ln" style="animation-delay:4.55s"><tspan class="key">&#160;&#160;aprendendo</tspan><tspan class="punc">: </tspan><tspan class="str">"Rust + design de sistemas de RPG"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="480" class="ln" style="animation-delay:4.8s"><tspan class="punc">};</tspan></text>
   </g>
 
-  <rect class="cursor" x="24" y="286" width="9" height="4"/>
+  <rect class="cursor" x="24" y="494" width="9" height="4"/>
 </svg>

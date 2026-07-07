@@ -1,20 +1,10 @@
 <p align="center">
-  <img src="assets/boot.svg" alt="$ whoami → felipe_lippelt · $ ./boot.sh → POST passed, mount /dev/felipe ready, load stack typescript rust node done, init rpg-tooling engines online, system ready ▸ bem-vindo(a)!" width="640"/>
+  <img src="assets/boot.svg" alt="Terminal: boot do perfil ($ whoami → felipe_lippelt, $ ./boot.sh) seguido de $ cat felipe.ts imprimindo const felipe: Dev = { pronomes, code, tools, focus, aprendendo }" width="720"/>
 </p>
 
 <p align="center"><em>
   dev em formação · helpdesk @ <a href="https://icl.com.br">ICL</a> · 📍 São Paulo, BR 🇧🇷
 </em></p>
-
-```typescript
-const felipe: Dev = {
-  pronomes: "ele/dele",
-  code: ["TypeScript", "JavaScript", "Rust", "Python", "Dart"],
-  tools: ["React", "Node.js", "Astro", "Tauri", "Vite", "Socket.io"],
-  focus: "ferramentas para RPG de mesa — VTTs, props imersivos e SRDs em código",
-  aprendendo: "Rust + design de sistemas de RPG",
-};
-```
 
 ---
 
