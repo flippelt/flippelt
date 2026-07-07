@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/boot.svg" alt="Terminal: boot do perfil ($ whoami → felipe_lippelt, $ ./boot.sh) seguido de $ cat felipe.ts imprimindo const felipe: Dev = { pronomes, code, tools, focus, aprendendo }" width="720"/>
+  <img src="assets/boot.svg" alt="Terminal: boot do perfil ($ whoami → felipe_lippelt, $ ./boot.sh) seguido de $ cat felipe.ts imprimindo const felipe_lippelt: Dev = { pronomes, code, tools, focus, aprendendo }" width="720"/>
 </p>
 
 <p align="center"><em>
