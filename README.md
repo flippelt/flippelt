@@ -59,20 +59,15 @@
 
 <h3>👾 Contribuições</h3>
 
-<!-- Pac-Man comendo o gráfico de contribuições — gerado pelo job `pacman` em .github/workflows/snake.yml (branch output-pacman). -->
+<!-- 🎮 Jogo do dia — sorteado a cada rodada do workflow (.github/workflows/snake.yml).
+     Rodízio: pacman, breakout, galaga, puzzle-bobble, bomberman, minesweeper e a cobrinha.
+     O job publica o SVG escolhido em today[-dark].svg (branch output), então esta seção
+     nunca precisa mudar: o jogo troca sozinho. -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output-pacman/pacman-contribution-graph-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output-pacman/pacman-contribution-graph.svg" />
-  <img alt="Pac-Man comendo meu gráfico de contribuições" src="https://raw.githubusercontent.com/flippelt/flippelt/output-pacman/pacman-contribution-graph.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/today-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/today.svg" />
+  <img alt="Jogo do dia comendo meu gráfico de contribuições" src="https://raw.githubusercontent.com/flippelt/flippelt/output/today.svg" />
 </picture>
-
-<!-- 🐍 Cobrinha (laranja) DESATIVADA — pra reativar, descomente o <picture> abaixo e troque o título 👾 por 🐍. O SVG segue sendo gerado pelo workflow (branch output), então está sempre atualizado.
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake.svg" />
-  <img alt="Snake animation do meu gráfico de contribuições" src="https://raw.githubusercontent.com/flippelt/flippelt/output/github-contribution-grid-snake.svg" />
-</picture>
--->
 
 ---
 
