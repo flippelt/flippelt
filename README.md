@@ -22,31 +22,24 @@
 ---
 -->
 
-<!--
 <h3>🚀 Projetos</h3>
 
-- **[GM Control Room](https://github.com/flippelt/gm-control-room)** — Painel de mestre de RPG em tempo real: cenas adaptativas (typewriter, pergaminho, terminal CRT), iluminação/clima, mixer de áudio, Spotify, dados, tracker de combate e histórico de rolagens — tudo sincronizado via WebSocket. Tela dos jogadores instalável como PWA. Suporta 11 sistemas (D&D 3.5/5e 2014/5e 2024, Pathfinder 1e/2e, Starfinder 1e/2e, Lancer, GUMSHOE, Daggerheart, Candela Obscura) via `@lippelt/srd-*`. `React` + `Node` + `Socket.io` + `TypeScript`.
+A vitrine com demos: **[flippelt.github.io](https://flippelt.github.io)**.
 
-- **[Immersive Terminal for RPGs](https://github.com/flippelt/Immersive-Terminal-for-RPGs)** — Terminal CRT retrô como prop para RPGs de mesa. `React` + `Vite`, com sistemas trocáveis e cenários autorais do mestre.
-
-- **[Scenario Forge](https://github.com/flippelt/scenario-forge)** — Editor desktop (Win/macOS/Linux) para criar cenários do Immersive Terminal: árvore de arquivos, flags de jogo (crack/tracer/lock), diálogo e eventos por formulário, validação e **preview ao vivo** no terminal real embutido. Exporta pasta versionável, bundle ou link. `Tauri 2 (Rust)` + `React` + `Vite` + `TypeScript`.
-
-- **[Campaign Codex](https://github.com/flippelt/campaign-codex)** — Wiki estático para campanhas de RPG feito em `Astro`: lore, mapas, NPCs e personagens. Multi-tema e responsivo.
-
-- **[Guild Briefings](https://github.com/flippelt/guild-briefings)** — Dossiê diegético da party de RPG de fantasia para a 2ª tela da mesa: cartazes de "procurado" dos personagens, quests em pergaminho com carimbo e **selo de cera** assinados pelo contratante, crônicas e divisão em *parties*. Importa fichas do **D&D Beyond** (JSON) ou manual. PWA instalável, com [demo ao vivo](https://flippelt.github.io/guild-briefings/). `React` + `Vite` + `TypeScript` + `PWA`.
-
-- **[An Abundance of Apocrypha (Foundry VTT)](https://github.com/flippelt/WnG-Apocrypha-FoundryVTT)** — Módulo para **Foundry VTT** (v11–v14) que adapta o conteúdo homebrew *An Abundance of Apocrypha*, de Nathan Dowdell, para o sistema **Wrath & Glory** (Cubicle 7) — com permissão do autor. Compêndios com 181 archetypes, 401 armas, 313 abilities, 64 stat blocks de NPC e 173 journals, mantidos como fonte **YAML** editável e compilados em **LevelDB** via Foundry CLI, com release automatizado pela Package Release API. `JavaScript` + `Foundry VTT` + `LevelDB`.
-
-- **[An Abundance of Apocryphal Adversaries (Foundry VTT)](https://github.com/flippelt/WnG-Apocryphal-Adversaries)** — Módulo de **bestiário** companheiro do anterior, adaptando *An Abundance of Apocryphal Adversaries* (Nathan Dowdell) para **Wrath & Glory** — também com permissão do autor. As **10 facções completas** (Orks, Necrons, Tyranids, Drukhari, T'au, Asuryani, Daemons do Caos, Astra Militarum, Malicious Miscellany e Heretic Astartes com as 5 legiões de culto) somam quase **600 stat blocks** prontos para arrastar ao mapa, além de centenas de itens (traços de adversário, relíquias e disciplinas psíquicas). Fonte **YAML** → **LevelDB** via Foundry CLI, release automatizado pela Package Release API. `JavaScript` + `Foundry VTT` + `LevelDB`.
+- **[Immersive Terminal for RPGs](https://github.com/flippelt/Immersive-Terminal-for-RPGs)** — Terminal CRT retrô como prop para RPGs de mesa. [Demo](https://flippelt.github.io/Immersive-Terminal-for-RPGs/). `React` + `Vite`.
+- **[Scenario Forge](https://github.com/flippelt/scenario-forge)** — Editor **web** dos cenários do terminal: árvore, flags (crack/tracer/lock), diálogo e eventos por formulário, preview in-process. [Demo](https://flippelt.github.io/scenario-forge/).
+- **[Campaign Codex](https://github.com/flippelt/campaign-codex)** — Wiki estático de campanha (Astro). [Demo](https://flippelt.github.io/campaign-codex/).
+- **[Guild Briefings](https://github.com/flippelt/guild-briefings)** — Dossiê diegético da party (D&D Beyond ou manual). [Demo](https://flippelt.github.io/guild-briefings/).
+- **[GM Control Room](https://github.com/flippelt/gm-control-room)** — Painel do mestre em tempo real + tela dos jogadores (PWA). [Wiki](https://github.com/flippelt/gm-control-room/wiki).
+- **[session-kit](https://github.com/flippelt/session-kit)** — um YAML de sessão → os formatos das ferramentas acima.
+- **[mesa-press](https://github.com/flippelt/mesa-press)** — Markdown → PDF de props (carta, cartaz, dataslate…).
+- **[Apocrypha](https://github.com/flippelt/WnG-Apocrypha-FoundryVTT)** / **[Apocryphal Adversaries](https://github.com/flippelt/WnG-Apocryphal-Adversaries)** — módulos Foundry VTT de Wrath & Glory (Nathan Dowdell, com permissão).
 
 <h3>📦 Pacotes (npm)</h3>
 
-- **[gmcr-srd-systems](https://github.com/flippelt/gmcr-srd-systems)** — Monorepo de regras SRD pra sistemas de RPG, [publicado no npm](https://www.npmjs.com/package/@lippelt/srd-core) como `@lippelt/srd-*`. Cada sistema é um pacote independente (dice presets, conditions, tracker fields, regras automatizadas). **11 sistemas implementados** sob diversas licenças abertas (OGL 1.0a, ORC, CC-BY, DPCGL, Lancer 3PP). `TypeScript` + `tsup` + `Vitest` + `npm workspaces` + CI tag-release.
-
-- **[rpg-prop-kit](https://github.com/flippelt/rpg-prop-kit)** — Biblioteca de componentes React (CRT retrô) publicada no [npm](https://www.npmjs.com/package/rpg-prop-kit). `TypeScript`, build em modo library com tipos.
-
-- **[rpgterm-engine](https://www.npmjs.com/package/rpgterm-engine)** — Motor de lógica do Immersive Terminal extraído e [publicado no npm](https://www.npmjs.com/package/rpgterm-engine): VFS, interpretador de comandos, crack/tracer/decrypt e composição de cenários, sem DOM. Fonte única consumida pelo terminal e pelo Scenario Forge — sem divergência de schema.
--->
+- **[@lippelt/srd-*](https://github.com/flippelt/gmcr-srd-systems)** — 11 sistemas SRD para o GM Control Room.
+- **[rpg-prop-kit](https://www.npmjs.com/package/rpg-prop-kit)** — CRT e props analógicos (React).
+- **[rpgterm-engine](https://www.npmjs.com/package/rpgterm-engine)** — motor do terminal (VFS, comandos, crack/tracer), consumido pelo ITR e pelo Scenario Forge.
 
 <h3>📈 GitHub</h3>
 
