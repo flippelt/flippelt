@@ -22,6 +22,32 @@
 ---
 -->
 
+<!--
+<h3>🚀 Projetos</h3>
+
+- **[GM Control Room](https://github.com/flippelt/gm-control-room)** — Painel de mestre de RPG em tempo real: cenas adaptativas (typewriter, pergaminho, terminal CRT), iluminação/clima, mixer de áudio, Spotify, dados, tracker de combate e histórico de rolagens — tudo sincronizado via WebSocket. Tela dos jogadores instalável como PWA. Suporta 11 sistemas (D&D 3.5/5e 2014/5e 2024, Pathfinder 1e/2e, Starfinder 1e/2e, Lancer, GUMSHOE, Daggerheart, Candela Obscura) via `@lippelt/srd-*`. `React` + `Node` + `Socket.io` + `TypeScript`.
+
+- **[Immersive Terminal for RPGs](https://github.com/flippelt/Immersive-Terminal-for-RPGs)** — Terminal CRT retrô como prop para RPGs de mesa. `React` + `Vite`, com sistemas trocáveis e cenários autorais do mestre.
+
+- **[Scenario Forge](https://github.com/flippelt/scenario-forge)** — Editor desktop (Win/macOS/Linux) para criar cenários do Immersive Terminal: árvore de arquivos, flags de jogo (crack/tracer/lock), diálogo e eventos por formulário, validação e **preview ao vivo** no terminal real embutido. Exporta pasta versionável, bundle ou link. `Tauri 2 (Rust)` + `React` + `Vite` + `TypeScript`.
+
+- **[Campaign Codex](https://github.com/flippelt/campaign-codex)** — Wiki estático para campanhas de RPG feito em `Astro`: lore, mapas, NPCs e personagens. Multi-tema e responsivo.
+
+- **[Guild Briefings](https://github.com/flippelt/guild-briefings)** — Dossiê diegético da party de RPG de fantasia para a 2ª tela da mesa: cartazes de "procurado" dos personagens, quests em pergaminho com carimbo e **selo de cera** assinados pelo contratante, crônicas e divisão em *parties*. Importa fichas do **D&D Beyond** (JSON) ou manual. PWA instalável, com [demo ao vivo](https://flippelt.github.io/guild-briefings/). `React` + `Vite` + `TypeScript` + `PWA`.
+
+- **[An Abundance of Apocrypha (Foundry VTT)](https://github.com/flippelt/WnG-Apocrypha-FoundryVTT)** — Módulo para **Foundry VTT** (v11–v14) que adapta o conteúdo homebrew *An Abundance of Apocrypha*, de Nathan Dowdell, para o sistema **Wrath & Glory** (Cubicle 7) — com permissão do autor. Compêndios com 181 archetypes, 401 armas, 313 abilities, 64 stat blocks de NPC e 173 journals, mantidos como fonte **YAML** editável e compilados em **LevelDB** via Foundry CLI, com release automatizado pela Package Release API. `JavaScript` + `Foundry VTT` + `LevelDB`.
+
+- **[An Abundance of Apocryphal Adversaries (Foundry VTT)](https://github.com/flippelt/WnG-Apocryphal-Adversaries)** — Módulo de **bestiário** companheiro do anterior, adaptando *An Abundance of Apocryphal Adversaries* (Nathan Dowdell) para **Wrath & Glory** — também com permissão do autor. As **10 facções completas** (Orks, Necrons, Tyranids, Drukhari, T'au, Asuryani, Daemons do Caos, Astra Militarum, Malicious Miscellany e Heretic Astartes com as 5 legiões de culto) somam quase **600 stat blocks** prontos para arrastar ao mapa, além de centenas de itens (traços de adversário, relíquias e disciplinas psíquicas). Fonte **YAML** → **LevelDB** via Foundry CLI, release automatizado pela Package Release API. `JavaScript` + `Foundry VTT` + `LevelDB`.
+
+<h3>📦 Pacotes (npm)</h3>
+
+- **[gmcr-srd-systems](https://github.com/flippelt/gmcr-srd-systems)** — Monorepo de regras SRD pra sistemas de RPG, [publicado no npm](https://www.npmjs.com/package/@lippelt/srd-core) como `@lippelt/srd-*`. Cada sistema é um pacote independente (dice presets, conditions, tracker fields, regras automatizadas). **11 sistemas implementados** sob diversas licenças abertas (OGL 1.0a, ORC, CC-BY, DPCGL, Lancer 3PP). `TypeScript` + `tsup` + `Vitest` + `npm workspaces` + CI tag-release.
+
+- **[rpg-prop-kit](https://github.com/flippelt/rpg-prop-kit)** — Biblioteca de componentes React (CRT retrô) publicada no [npm](https://www.npmjs.com/package/rpg-prop-kit). `TypeScript`, build em modo library com tipos.
+
+- **[rpgterm-engine](https://www.npmjs.com/package/rpgterm-engine)** — Motor de lógica do Immersive Terminal extraído e [publicado no npm](https://www.npmjs.com/package/rpgterm-engine): VFS, interpretador de comandos, crack/tracer/decrypt e composição de cenários, sem DOM. Fonte única consumida pelo terminal e pelo Scenario Forge — sem divergência de schema.
+-->
+
 <h3>📈 GitHub</h3>
 
 <p align="left">
