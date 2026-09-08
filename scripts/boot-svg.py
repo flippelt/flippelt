@@ -113,10 +113,10 @@ def build() -> str:
         dict(id="rpg",     label="Bottle rpg (0.5.0)",                      t0=4.35, t1=5.35, stall=None, reverse=False, adhd=False, note="# mesa"),
         dict(id="human",   label=f"Bottle human ({version})",               t0=4.35, t1=8.15, stall=(6.50, 87, 7.85), reverse=False, adhd=False, note="# finally stable"),
         dict(id="humor",   label="Bottle humor (3.2.1)",                    t0=4.35, t1=6.10, stall=None, reverse=False, adhd=False, note="--with-piadas"),
-        dict(id="sarcasm", label="Bottle sarcasm (4.2.0)",                  t0=4.35, t1=6.45, stall=None, reverse=False, adhd=False, note="--with-defense-mechanism"),
-        dict(id="brain",   label="Bottle brain (1.0.0)",                    t0=4.35, t1=6.90, stall=None, reverse=False, adhd=False, note="--with-cola"),
-        dict(id="adhd",    label="Bottle adhd (0.4.1)",                     t0=4.35, t1=5.15, stall=None, reverse=False, adhd=True,  note="# squirrel"),
-        dict(id="totb",    label="Bottle thinking-outside-the-box (0.1.0)", t0=4.35, t1=7.35, stall=None, reverse=True,  adhd=False, note="# not a box"),
+        dict(id="sarcasm", label="Bottle sarcasm (4.2.0)",                  t0=4.35, t1=6.45, stall=None, reverse=False, adhd=False, note="--as-defense-mechanism"),
+        dict(id="brain",   label="Bottle brain (1.0.0)",                    t0=4.35, t1=6.90, stall=None, reverse=False, adhd=False, note="--with-hiperfocus"),
+        dict(id="adhd",    label="Bottle adhd (0.4.1)",                     t0=4.35, t1=5.15, stall=None, reverse=False, adhd=True,  note=None, ribbon=True),
+        dict(id="totb",    label="Bottle thinking-outside-the-box (0.1.0)", t0=4.35, t1=7.35, stall=None, reverse=True,  adhd=False, note="# poured sideways"),
         dict(id="goblin",  label="Bottle dice-goblin (13.0.0)",             t0=4.35, t1=6.65, stall=None, reverse=False, adhd=False, note="# shiny math rocks"),
     ]
     for i, p in enumerate(packages):
@@ -214,7 +214,7 @@ def build() -> str:
         css.append(
             f"    .bar-{i} {{ animation: appear 0s linear {t0:.2f}s both, vanish .18s ease {t1:.2f}s forwards; }}"
         )
-        if row.get("note"):
+        if row.get("note") or row.get("ribbon"):
             css.append(f"    .note-{i} {{ animation: appear .25s ease {t1 + 0.05:.2f}s both; }}")
 
     css.append("")
@@ -268,7 +268,18 @@ def build() -> str:
             f'      </g>'
         )
 
+    def orange_ribbon(row_id: str, x: int, y: int) -> str:
+        # ADHD awareness ribbon (laço laranja), aligned to the 14px line.
+        top = y - 13
+        return (
+            f'      <g class="note note-{row_id}" transform="translate({x} {top})">\n'
+            f'        <path fill="#F58220" d="M7 .6C4.1.6 2.4 3 2.4 5.6c0 2.2 1.4 4.1 3.4 6.2L2.6 17h2.6l1.8-4.1L8.8 17h2.6l-3.2-5.2c2-2.1 3.4-4 3.4-6.2C11.6 3 9.9.6 7 .6zm0 2c1.6 0 2.7 1.3 2.7 3 0 1.5-1 3-2.7 5.1C5.3 8.6 4.3 7.1 4.3 5.6c0-1.7 1.1-3 2.7-3z"/>\n'
+            f'      </g>\n'
+        )
+
     def note(row: dict) -> str:
+        if row.get("ribbon"):
+            return orange_ribbon(row["id"], BAR_X, row["y"])
         if not row.get("note"):
             return ""
         return (
