@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="assets/boot.svg" alt="Terminal: $ whoami e ./boot.sh; depois $ brew install node rust python rpg human humor sarcasm brain adhd thinking-outside-the-box dice-goblin (barras #, %, checks verdes); em seguida $ cat felipe.ts imprimindo const felipe_lippelt: Dev = { pronomes, code, tools, focus, aprendendo }" width="720"/>
+  <img src="assets/boot.svg" alt="Terminal: $ whoami and ./boot.sh; then $ brew install node rust python rpg human humor sarcasm brain adhd thinking-outside-the-box dice-goblin; then $ cat felipe.ts prints const felipe_lippelt: Dev = { pronouns, role, location, langs, code, tools, focus, learning }" width="720"/>
 </p>
 
 <p align="center"><em>
-  dev em formação · helpdesk @ <a href="https://icl.com.br">ICL</a> · 📍 São Paulo, BR 🇧🇷
+  developer in training · helpdesk @ <a href="https://icl.com.br">ICL</a> · 📍 São Paulo, BR 🇧🇷
 </em></p>
 
 ---
@@ -51,13 +51,13 @@
 <h3>📈 GitHub</h3>
 
 <p align="left">
-  <img height="160em" align="center" src="https://github-stats-extended.vercel.app/api?username=flippelt&include_all_commits=true&show_icons=true&rank_icon=github&theme=github_dark&hide_border=true&custom_title=Estat%C3%ADsticas" alt="Estatísticas do GitHub de Felipe" />
-  <img height="160em" align="center" src="https://github-stats-extended.vercel.app/api/top-langs/?username=flippelt&layout=compact&theme=github_dark&hide_border=true" alt="Linguagens mais usadas" />
+  <img height="160em" align="center" src="https://github-stats-extended.vercel.app/api?username=flippelt&include_all_commits=true&show_icons=true&rank_icon=github&theme=github_dark&hide_border=true&custom_title=Stats" alt="Felipe's GitHub stats" />
+  <img height="160em" align="center" src="https://github-stats-extended.vercel.app/api/top-langs/?username=flippelt&layout=compact&theme=github_dark&hide_border=true" alt="Most used languages" />
 </p>
 
 ---
 
-<h3>👾 Contribuições</h3>
+<h3>👾 Contributions</h3>
 
 <!-- 🎮 Jogo do dia — sorteado a cada rodada do workflow (.github/workflows/snake.yml).
      Rodízio: pacman, breakout, galaga, puzzle-bobble, bomberman, minesweeper e a cobrinha.
@@ -66,12 +66,12 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/today-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/today.svg" />
-  <img alt="Jogo do dia comendo meu gráfico de contribuições" src="https://raw.githubusercontent.com/flippelt/flippelt/output/today.svg" />
+  <img alt="Game of the day eating my contribution graph" src="https://raw.githubusercontent.com/flippelt/flippelt/output/today.svg" />
 </picture>
 
 ---
 
-<h3>📫 Vamos conversar?</h3>
+<h3>📫 Let's talk?</h3>
 
 <p align="left">
   <a href="https://flippelt.github.io" target="_blank"><img src="https://img.shields.io/badge/-Portfolio-222222?style=for-the-badge&logo=githubpages&logoColor=FFFFFF"/></a>

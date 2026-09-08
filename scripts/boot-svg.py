@@ -117,7 +117,7 @@ def build() -> str:
         dict(id="brain",   label="Bottle brain (1.0.0)",                    t0=4.35, t1=6.90, stall=None, reverse=False, adhd=False, note="--with-cola"),
         dict(id="adhd",    label="Bottle adhd (0.4.1)",                     t0=4.35, t1=5.15, stall=None, reverse=False, adhd=True,  note="# squirrel"),
         dict(id="totb",    label="Bottle thinking-outside-the-box (0.1.0)", t0=4.35, t1=7.35, stall=None, reverse=True,  adhd=False, note="# not a box"),
-        dict(id="goblin",  label="Bottle dice-goblin (13.0.0)",             t0=4.35, t1=6.65, stall=None, reverse=False, adhd=False, note="# shiny d20"),
+        dict(id="goblin",  label="Bottle dice-goblin (13.0.0)",             t0=4.35, t1=6.65, stall=None, reverse=False, adhd=False, note="# shiny math rocks"),
     ]
     for i, p in enumerate(packages):
         p["y"] = bottle_y0 + i * bottle_dy
@@ -126,12 +126,15 @@ def build() -> str:
     y_keg = y_sum + 22
     y_cat = y_keg + 40
     y_const = y_cat + 24
-    y_pronomes = y_const + 24
-    y_code = y_pronomes + 24
+    y_pronouns = y_const + 24
+    y_role = y_pronouns + 24
+    y_location = y_role + 24
+    y_langs = y_location + 24
+    y_code = y_langs + 24
     y_tools = y_code + 24
     y_focus = y_tools + 24
-    y_aprendendo = y_focus + 24
-    y_end = y_aprendendo + 24
+    y_learning = y_focus + 24
+    y_end = y_learning + 24
     cursor_y = y_end + 16
     h = cursor_y + 18
 
@@ -179,7 +182,7 @@ def build() -> str:
         "    @keyframes sp1 { 0%,24% { opacity: 0 } 25%,49% { opacity: 1 } 50%,100% { opacity: 0 } }",
         "    @keyframes sp2 { 0%,49% { opacity: 0 } 50%,74% { opacity: 1 } 75%,100% { opacity: 0 } }",
         "    @keyframes sp3 { 0%,74% { opacity: 0 } 75%,100% { opacity: 1 } }",
-        "    .cursor { fill: #c9d1d9; opacity: 1; animation: appear .1s linear 11.00s both, blink 1.05s step-end 11.10s infinite; }",
+        "    .cursor { fill: #c9d1d9; opacity: 1; animation: appear .1s linear 11.75s both, blink 1.05s step-end 11.85s infinite; }",
         "",
     ]
 
@@ -194,9 +197,10 @@ def build() -> str:
         ("ln-sarcasm", 4.35), ("ln-brain", 4.35), ("ln-adhd", 4.35),
         ("ln-totb", 4.35), ("ln-goblin", 4.35),
         ("ln-sum", 8.40), ("ln-keg", 8.60),
-        ("ln-cat", 9.00), ("ln-const", 9.30), ("ln-pronomes", 9.55),
-        ("ln-code", 9.80), ("ln-tools", 10.05), ("ln-focus", 10.30),
-        ("ln-aprendendo", 10.55), ("ln-end", 10.80),
+        ("ln-cat", 9.00), ("ln-const", 9.30), ("ln-pronouns", 9.55),
+        ("ln-role", 9.80), ("ln-location", 10.05), ("ln-langs", 10.30),
+        ("ln-code", 10.55), ("ln-tools", 10.80), ("ln-focus", 11.05),
+        ("ln-learning", 11.30), ("ln-end", 11.55),
     ]
     for cls, delay in line_delays:
         css.append(f"    .{cls} {{ animation: appear .15s ease {delay:.2f}s both; }}")
@@ -287,10 +291,10 @@ def build() -> str:
         return "\n".join(body)
 
     aria = (
-        "Terminal: $ whoami e ./boot.sh; depois $ brew install node rust python rpg "
+        "Terminal: $ whoami and ./boot.sh; then $ brew install node rust python rpg "
         "human humor sarcasm brain adhd thinking-outside-the-box dice-goblin "
-        "com barras de #, porcentagem e checks verdes; em seguida $ cat felipe.ts "
-        "imprime const felipe_lippelt: Dev = { pronomes, code, tools, focus, aprendendo }"
+        "with # progress bars, percents and green checks; then $ cat felipe.ts "
+        "prints const felipe_lippelt: Dev = { pronouns, role, location, langs, code, tools, focus, learning }"
     )
 
     bottle_rows = "\n".join(row_group(p, f"ln-{p['id']}") for p in packages)
@@ -318,7 +322,7 @@ def build() -> str:
     <text x="24" y="{y_mount}" class="ln ln-mount"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  mount /dev/felipe ................. </tspan><tspan class="val">ready</tspan></text>
     <text x="24" y="{y_stack}" class="ln ln-stack"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  load stack: typescript rust node .. </tspan><tspan class="val">done</tspan></text>
     <text x="24" y="{y_rpg}" class="ln ln-engines"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  init rpg-tooling engines .......... </tspan><tspan class="val">online</tspan></text>
-    <text x="24" y="{y_ready}" class="ln ln-ready"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  system ready ▸ </tspan><tspan class="ready">bem-vindo(a)! 🕶️</tspan></text>
+    <text x="24" y="{y_ready}" class="ln ln-ready"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  system ready ▸ </tspan><tspan class="ready">welcome! 🕶️</tspan></text>
 
     <text x="24" y="{y_brew1}" class="ln ln-brew1"><tspan class="prompt">$ </tspan><tspan class="cmd">brew install node rust python rpg human humor sarcasm brain \\</tspan></text>
     <text x="24" y="{y_brew2}" class="ln ln-brew2"><tspan class="cmd">               adhd thinking-outside-the-box dice-goblin</tspan></text>
@@ -332,11 +336,14 @@ def build() -> str:
 
     <text x="24" y="{y_cat}" class="ln ln-cat"><tspan class="prompt">$ </tspan><tspan class="cmd">cat felipe.ts</tspan></text>
     <text x="24" y="{y_const}" class="ln ln-const"><tspan class="kw">const </tspan><tspan class="var">felipe_lippelt</tspan><tspan class="punc">: </tspan><tspan class="type">Dev</tspan><tspan class="punc"> = {{</tspan></text>
-    <text x="24" y="{y_pronomes}" class="ln ln-pronomes"><tspan class="key">&#160;&#160;pronomes</tspan><tspan class="punc">: </tspan><tspan class="str">"ele/dele"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="{y_pronouns}" class="ln ln-pronouns"><tspan class="key">&#160;&#160;pronouns</tspan><tspan class="punc">: </tspan><tspan class="str">"he/him"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="{y_role}" class="ln ln-role"><tspan class="key">&#160;&#160;role</tspan><tspan class="punc">: </tspan><tspan class="str">"helpdesk analyst @ ICL"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="{y_location}" class="ln ln-location"><tspan class="key">&#160;&#160;location</tspan><tspan class="punc">: </tspan><tspan class="str">"São Paulo, BR"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="{y_langs}" class="ln ln-langs"><tspan class="key">&#160;&#160;langs</tspan><tspan class="punc">: [</tspan><tspan class="str">"pt-BR", "en"</tspan><tspan class="punc">],</tspan></text>
     <text x="24" y="{y_code}" class="ln ln-code"><tspan class="key">&#160;&#160;code</tspan><tspan class="punc">: [</tspan><tspan class="str">"TypeScript", "JavaScript", "Rust", "Python", "Dart"</tspan><tspan class="punc">],</tspan></text>
-    <text x="24" y="{y_tools}" class="ln ln-tools"><tspan class="key">&#160;&#160;tools</tspan><tspan class="punc">: [</tspan><tspan class="str">"React", "Node.js", "Astro", "Tauri", "Vite", "Socket.io"</tspan><tspan class="punc">],</tspan></text>
-    <text x="24" y="{y_focus}" class="ln ln-focus"><tspan class="key">&#160;&#160;focus</tspan><tspan class="punc">: </tspan><tspan class="str">"ferramentas para RPG de mesa — VTTs, props imersivos e SRDs em código"</tspan><tspan class="punc">,</tspan></text>
-    <text x="24" y="{y_aprendendo}" class="ln ln-aprendendo"><tspan class="key">&#160;&#160;aprendendo</tspan><tspan class="punc">: </tspan><tspan class="str">"Rust + design de sistemas de RPG"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="{y_tools}" class="ln ln-tools"><tspan class="key">&#160;&#160;tools</tspan><tspan class="punc">: [</tspan><tspan class="str">"React", "Node.js", "Astro", "Vite", "Socket.io"</tspan><tspan class="punc">],</tspan></text>
+    <text x="24" y="{y_focus}" class="ln ln-focus"><tspan class="key">&#160;&#160;focus</tspan><tspan class="punc">: </tspan><tspan class="str">"TTRPG tooling — VTTs, immersive props, SRDs as code"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="{y_learning}" class="ln ln-learning"><tspan class="key">&#160;&#160;learning</tspan><tspan class="punc">: </tspan><tspan class="str">"Rust + TTRPG system design"</tspan><tspan class="punc">,</tspan></text>
     <text x="24" y="{y_end}" class="ln ln-end"><tspan class="punc">}};</tspan></text>
   </g>
 
