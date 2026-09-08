@@ -48,33 +48,36 @@
 - **[rpgterm-engine](https://www.npmjs.com/package/rpgterm-engine)** — Motor de lógica do Immersive Terminal extraído e [publicado no npm](https://www.npmjs.com/package/rpgterm-engine): VFS, interpretador de comandos, crack/tracer/decrypt e composição de cenários, sem DOM. Fonte única consumida pelo terminal e pelo Scenario Forge — sem divergência de schema.
 -->
 
-<h3>📈 GitHub</h3>
-
-<p align="left">
-  <img height="160em" align="center" src="https://github-stats-extended.vercel.app/api?username=flippelt&include_all_commits=true&show_icons=true&rank_icon=github&theme=github_dark&hide_border=true&custom_title=Stats" alt="Felipe's GitHub stats" />
-  <img height="160em" align="center" src="https://github-stats-extended.vercel.app/api/top-langs/?username=flippelt&layout=compact&theme=github_dark&hide_border=true" alt="Most used languages" />
+<!-- Game of the day: workflow .github/workflows/snake.yml picks one of
+     pacman, breakout, galaga, puzzle-bobble, bomberman, minesweeper, snake
+     and publishes it as today[-dark].svg on the output branch. -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/today-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/today.svg" />
+    <img alt="Game of the day eating my contribution graph" src="https://raw.githubusercontent.com/flippelt/flippelt/output/today.svg" />
+  </picture>
 </p>
 
 ---
 
-<h3>👾 Contributions</h3>
-
-<!-- 🎮 Jogo do dia — sorteado a cada rodada do workflow (.github/workflows/snake.yml).
-     Rodízio: pacman, breakout, galaga, puzzle-bobble, bomberman, minesweeper e a cobrinha.
-     O job publica o SVG escolhido em today[-dark].svg (branch output), então esta seção
-     nunca precisa mudar: o jogo troca sozinho. -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/today-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/flippelt/flippelt/output/today.svg" />
-  <img alt="Game of the day eating my contribution graph" src="https://raw.githubusercontent.com/flippelt/flippelt/output/today.svg" />
-</picture>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=flippelt&include_all_commits=true&show_icons=true&rank_icon=github&theme=github_dark&hide_border=true&custom_title=Stats" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-stats-extended.vercel.app/api?username=flippelt&include_all_commits=true&show_icons=true&rank_icon=github&theme=default&hide_border=true&custom_title=Stats" />
+    <img height="160em" src="https://github-stats-extended.vercel.app/api?username=flippelt&include_all_commits=true&show_icons=true&rank_icon=github&theme=github_dark&hide_border=true&custom_title=Stats" alt="Felipe's GitHub stats" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=flippelt&layout=compact&theme=github_dark&hide_border=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=flippelt&layout=compact&theme=default&hide_border=true" />
+    <img height="160em" src="https://github-stats-extended.vercel.app/api/top-langs/?username=flippelt&layout=compact&theme=github_dark&hide_border=true" alt="Most used languages" />
+  </picture>
+</p>
 
 ---
 
-<h3>📫 Let's talk?</h3>
-
-<p align="left">
-  <a href="https://flippelt.github.io" target="_blank"><img src="https://img.shields.io/badge/-Portfolio-222222?style=for-the-badge&logo=githubpages&logoColor=FFFFFF"/></a>
-  <a href="mailto:lippelt.f@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=FFFFFF"/></a>
-  <a href="https://www.linkedin.com/in/flippelt/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=Linkedin&logoColor=FFFFFF"/></a>
+<p align="center">
+  <a href="https://flippelt.github.io" target="_blank"><img src="https://img.shields.io/badge/-Portfolio-222222?style=for-the-badge&logo=githubpages&logoColor=FFFFFF" alt="Portfolio"/></a>
+  <a href="mailto:lippelt.f@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=FFFFFF" alt="Gmail"/></a>
+  <a href="https://www.linkedin.com/in/flippelt/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=Linkedin&logoColor=FFFFFF" alt="LinkedIn"/></a>
 </p>
