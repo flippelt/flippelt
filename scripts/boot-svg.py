@@ -128,13 +128,10 @@ def build() -> str:
     y_boot, y_post, y_mount = 144, 168, 192
     y_stack, y_rpg, y_ready = 216, 240, 264
     y_brew1, y_brew2, y_upd = 308, 330, 356
-    y_json, y_fetch1, y_fetch2, y_fetch3 = 380, 406, 428, 450
-    bottle_y0, bottle_dy = 476, 22
+    y_json, y_fetch1, y_fetch2 = 380, 406, 428
+    bottle_y0, bottle_dy = 454, 22
 
     packages = [
-        dict(id="node",    label="Bottle node (22.19.0)",                   t0=4.35, t1=5.55, stall=None, reverse=False, adhd=False, note=None),
-        dict(id="rust",    label="Bottle rust (1.89.0)",                    t0=4.35, t1=7.70, stall=None, reverse=False, adhd=False, note=None),
-        dict(id="python",  label="Bottle python (3.13.7)",                  t0=4.35, t1=5.80, stall=None, reverse=False, adhd=False, note=None),
         dict(id="rpg",     label="Bottle rpg (0.5.0)",                      t0=4.35, t1=5.35, stall=None, reverse=False, adhd=False, note="# mesa"),
         dict(id="human",   label=f"Bottle human ({version})",               t0=4.35, t1=8.15, stall=(6.50, 87, 7.85), reverse=False, adhd=False, note="# finally stable"),
         dict(id="humor",   label="Bottle humor (3.2.1)",                    t0=4.35, t1=6.10, stall=None, reverse=False, adhd=False, note="--with-piadas"),
@@ -219,8 +216,6 @@ def build() -> str:
         ("ln-engines", 2.20), ("ln-ready", 2.50),
         ("ln-brew1", 2.90), ("ln-brew2", 3.05), ("ln-upd", 3.25),
         ("ln-json", 3.45), ("ln-fetch1", 4.10), ("ln-fetch2", 4.20),
-        ("ln-fetch3", 4.28),
-        ("ln-node", 4.35), ("ln-rust", 4.35), ("ln-python", 4.35),
         ("ln-rpg", 4.35), ("ln-human", 4.35), ("ln-humor", 4.35),
         ("ln-sarcasm", 4.35), ("ln-brain", 4.35), ("ln-creativity", 4.35),
         ("ln-father", 4.35), ("ln-adhd", 4.35),
@@ -331,7 +326,7 @@ def build() -> str:
         return "\n".join(body)
 
     aria = (
-        "Terminal: $ whoami and ./boot.sh; then $ brew install node rust python rpg "
+        "Terminal: $ whoami and ./boot.sh; then $ brew install rpg "
         "human humor sarcasm brain creativity father adhd thinking-outside-the-box dice-goblin "
         "with # progress bars, percents and green checks; then $ cat felipe.ts "
         "prints const felipe_lippelt: Dev = { pronouns, role, location, langs, code, tools, focus, learning }"
@@ -364,15 +359,14 @@ def build() -> str:
     <text x="24" y="{y_rpg}" class="ln ln-engines"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  init rpg-tooling engines .......... </tspan><tspan class="val">online</tspan></text>
     <text x="24" y="{y_ready}" class="ln ln-ready"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  system ready ▸ </tspan><tspan class="ready">welcome! 🕶️</tspan></text>
 
-    <text x="24" y="{y_brew1}" class="ln ln-brew1"><tspan class="prompt">$ </tspan><tspan class="cmd">brew install node rust python rpg human humor sarcasm brain \\</tspan></text>
-    <text x="24" y="{y_brew2}" class="ln ln-brew2"><tspan class="cmd">               creativity father adhd thinking-outside-the-box dice-goblin</tspan></text>
+    <text x="24" y="{y_brew1}" class="ln ln-brew1"><tspan class="prompt">$ </tspan><tspan class="cmd">brew install rpg human humor sarcasm brain creativity father \\</tspan></text>
+    <text x="24" y="{y_brew2}" class="ln ln-brew2"><tspan class="cmd">               adhd thinking-outside-the-box dice-goblin</tspan></text>
     <text x="24" y="{y_upd}" class="ln ln-upd"><tspan class="eq">==&gt;</tspan><tspan class="mid"> Updating Homebrew...</tspan></text>
 {row_group(json_row, "ln-json")}
-    <text x="24" y="{y_fetch1}" class="ln ln-fetch1"><tspan class="eq">==&gt;</tspan><tspan class="mid"> Fetching downloads for: node, rust, python, rpg, human,</tspan></text>
-    <text x="24" y="{y_fetch2}" class="ln ln-fetch2"><tspan class="mid">    humor, sarcasm, brain, creativity, father, adhd,</tspan></text>
-    <text x="24" y="{y_fetch3}" class="ln ln-fetch3"><tspan class="mid">    thinking-outside-the-box, dice-goblin</tspan></text>
+    <text x="24" y="{y_fetch1}" class="ln ln-fetch1"><tspan class="eq">==&gt;</tspan><tspan class="mid"> Fetching downloads for: rpg, human, humor, sarcasm, brain,</tspan></text>
+    <text x="24" y="{y_fetch2}" class="ln ln-fetch2"><tspan class="mid">    creativity, father, adhd, thinking-outside-the-box, dice-goblin</tspan></text>
 {bottle_rows}
-    <text x="24" y="{y_sum}" class="ln ln-sum"><tspan class="beer">🍺  13 installed</tspan></text>
+    <text x="24" y="{y_sum}" class="ln ln-sum"><tspan class="beer">🍺  10 installed</tspan></text>
     <text x="24" y="{y_keg}" class="ln ln-keg"><tspan class="mid">    human is keg-only — macOS already shipped one</tspan></text>
 
     <text x="24" y="{y_cat}" class="ln ln-cat"><tspan class="prompt">$ </tspan><tspan class="cmd">cat felipe.ts</tspan></text>
