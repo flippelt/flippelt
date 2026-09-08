@@ -1,28 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 512" width="780" height="512" role="img" aria-label="Terminal: $ whoami → felipe_lippelt; $ ./boot.sh → POST passed, mount /dev/felipe ready, load stack typescript rust node done, init rpg-tooling engines online, system ready ▸ bem-vindo(a)!; $ cat felipe.ts → const felipe_lippelt: Dev = { pronomes: ele/dele, code: TypeScript JavaScript Rust Python Dart, tools: React Node.js Astro Tauri Vite Socket.io, focus: ferramentas para RPG de mesa, aprendendo: Rust + design de sistemas de RPG }">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" width="780" height="560" role="img" aria-label="Terminal: $ brew install node rust human humor rpg-kit com barras de #, porcentagem e checks verdes; human trava em 87% e é keg-only porque o macOS já veio com um; em seguida $ cat felipe.ts imprime const felipe_lippelt: Dev = { pronomes, code, tools, focus, aprendendo }">
   <defs>
     <style>
-      .term { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 14px; }
-      .prompt { fill: #3fb950; }
-      .cmd    { fill: #c9d1d9; }
-      .user   { fill: #58a6ff; }
-      .ok     { fill: #3fb950; }
-      .mid    { fill: #8b949e; }
-      .val    { fill: #58a6ff; }
-      .ready  { fill: #f0b429; }
-      .kw     { fill: #ff7b72; }
-      .var    { fill: #c9d1d9; }
-      .type   { fill: #ffa657; }
-      .key    { fill: #79c0ff; }
-      .str    { fill: #a5d6ff; }
-      .punc   { fill: #8b949e; }
-      .ln     { opacity: 1; animation: appear .4s ease both; }
-      .cursor { fill: #c9d1d9; opacity: 1; animation: appear .1s linear 5.1s both, blink 1.05s step-end 5.2s infinite; }
-      @keyframes appear { from { opacity: 0 } to { opacity: 1 } }
-      @keyframes blink  { 50% { opacity: 0 } }
+    .term { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 14px; }
+    .prompt { fill: #3fb950; }
+    .cmd    { fill: #c9d1d9; }
+    .mid    { fill: #8b949e; }
+    .ready  { fill: #f0b429; }
+    .kw     { fill: #ff7b72; }
+    .var    { fill: #c9d1d9; }
+    .type   { fill: #ffa657; }
+    .key    { fill: #79c0ff; }
+    .str    { fill: #a5d6ff; }
+    .punc   { fill: #8b949e; }
+    .eq     { fill: #3fb950; }
+    .track  { fill: #484f58; }
+    .hash   { fill: #3fb950; }
+    .pct    { fill: #8b949e; }
+    .pct-end{ fill: #3fb950; }
+    .note   { fill: #6e7681; }
+    .beer   { fill: #c9d1d9; }
+    .spin-g { opacity: 0; }
+    .check  { opacity: 1; }
+    .bar    { opacity: 0; }
+    .ln     { opacity: 1; }
+    .sf     { fill: #58a6ff; opacity: 0; }
+    .s0 { animation: sp0 .48s steps(1) infinite; }
+    .s1 { animation: sp1 .48s steps(1) infinite; }
+    .s2 { animation: sp2 .48s steps(1) infinite; }
+    .s3 { animation: sp3 .48s steps(1) infinite; }
+    @keyframes appear { from { opacity: 0 } to { opacity: 1 } }
+    @keyframes vanish { to { opacity: 0 } }
+    @keyframes blink  { 50% { opacity: 0 } }
+    @keyframes sp0 { 0%,24% { opacity: 1 } 25%,100% { opacity: 0 } }
+    @keyframes sp1 { 0%,24% { opacity: 0 } 25%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
+    @keyframes sp2 { 0%,49% { opacity: 0 } 50%,74% { opacity: 1 } 75%,100% { opacity: 0 } }
+    @keyframes sp3 { 0%,74% { opacity: 0 } 75%,100% { opacity: 1 } }
+    .cursor { fill: #c9d1d9; opacity: 1; animation: appear .1s linear 7.45s both, blink 1.05s step-end 7.55s infinite; }
+
+    .ln-cmd { animation: appear .15s ease 0.20s both; }
+    .ln-upd { animation: appear .15s ease 0.50s both; }
+    .ln-json { animation: appear .15s ease 0.70s both; }
+    .ln-fetch { animation: appear .15s ease 1.40s both; }
+    .ln-node { animation: appear .15s ease 1.55s both; }
+    .ln-rust { animation: appear .15s ease 1.55s both; }
+    .ln-human { animation: appear .15s ease 1.55s both; }
+    .ln-humor { animation: appear .15s ease 1.55s both; }
+    .ln-rpg { animation: appear .15s ease 1.55s both; }
+    .ln-sum { animation: appear .15s ease 4.75s both; }
+    .ln-keg { animation: appear .15s ease 4.95s both; }
+    .ln-cat { animation: appear .15s ease 5.40s both; }
+    .ln-const { animation: appear .15s ease 5.70s both; }
+    .ln-pronomes { animation: appear .15s ease 6.00s both; }
+    .ln-code { animation: appear .15s ease 6.25s both; }
+    .ln-tools { animation: appear .15s ease 6.50s both; }
+    .ln-focus { animation: appear .15s ease 6.75s both; }
+    .ln-aprendendo { animation: appear .15s ease 7.00s both; }
+    .ln-end { animation: appear .15s ease 7.25s both; }
+    .spin-json { animation: appear 0s linear 0.70s both, vanish 0s linear 1.22s forwards; }
+    .check-json { animation: appear .18s ease 1.22s both; }
+    .bar-json { animation: appear 0s linear 0.70s both, vanish .18s ease 1.22s forwards; }
+    .spin-node { animation: appear 0s linear 1.55s both, vanish 0s linear 2.85s forwards; }
+    .check-node { animation: appear .18s ease 2.85s both; }
+    .bar-node { animation: appear 0s linear 1.55s both, vanish .18s ease 2.85s forwards; }
+    .spin-rust { animation: appear 0s linear 1.55s both, vanish 0s linear 3.70s forwards; }
+    .check-rust { animation: appear .18s ease 3.70s both; }
+    .bar-rust { animation: appear 0s linear 1.55s both, vanish .18s ease 3.70s forwards; }
+    .spin-human { animation: appear 0s linear 1.55s both, vanish 0s linear 4.55s forwards; }
+    .check-human { animation: appear .18s ease 4.55s both; }
+    .bar-human { animation: appear 0s linear 1.55s both, vanish .18s ease 4.55s forwards; }
+    .note-human { animation: appear .25s ease 4.60s both; }
+    .spin-humor { animation: appear 0s linear 1.55s both, vanish 0s linear 3.25s forwards; }
+    .check-humor { animation: appear .18s ease 3.25s both; }
+    .bar-humor { animation: appear 0s linear 1.55s both, vanish .18s ease 3.25s forwards; }
+    .note-humor { animation: appear .25s ease 3.30s both; }
+    .spin-rpg { animation: appear 0s linear 1.55s both, vanish 0s linear 2.40s forwards; }
+    .check-rpg { animation: appear .18s ease 2.40s both; }
+    .bar-rpg { animation: appear 0s linear 1.55s both, vanish .18s ease 2.40s forwards; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ln, .spin-g, .check, .bar, .note, .cursor, .sf, .h, .pstep { animation: none !important; }
+      .spin-g, .bar { opacity: 0 !important; }
+      .check, .ln, .note { opacity: 1 !important; }
+      .cursor { opacity: 1 !important; }
+    }
     </style>
   </defs>
 
-  <rect x="1" y="1" width="778" height="510" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="1" y="1" width="778" height="558" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
   <line x1="1" y1="40" x2="779" y2="40" stroke="#30363d" stroke-width="1"/>
   <circle cx="24" cy="20.5" r="6" fill="#ff5f56"/>
   <circle cx="44" cy="20.5" r="6" fill="#ffbd2e"/>
@@ -30,25 +94,160 @@
   <text x="390" y="25" text-anchor="middle" class="term" fill="#6e7681" font-size="13">felipe@github ~ /profile</text>
 
   <g class="term" xml:space="preserve">
-    <text x="24" y="72"  class="ln" style="animation-delay:.15s"><tspan class="prompt">$ </tspan><tspan class="cmd">whoami</tspan></text>
-    <text x="24" y="96"  class="ln" style="animation-delay:.5s"><tspan class="user">felipe_lippelt</tspan></text>
+    <text x="24" y="70" class="ln ln-cmd"><tspan class="prompt">$ </tspan><tspan class="cmd">brew install node rust human humor rpg-kit</tspan></text>
+    <text x="24" y="94" class="ln ln-upd"><tspan class="eq">==&gt;</tspan><tspan class="mid"> Updating Homebrew...</tspan></text>
+    <g class="ln ln-json">
+      <g class="spin-g spin-json">
+        <text x="26" y="118" class="term sf s0">⠋</text>
+        <text x="26" y="118" class="term sf s1">⠙</text>
+        <text x="26" y="118" class="term sf s2">⠹</text>
+        <text x="26" y="118" class="term sf s3">⠸</text>
+      </g>
+      <g class="check check-json" transform="translate(24 107)">
+        <circle cx="7" cy="7" r="7" fill="#3fb950"/>
+        <path d="M3.8 7.2 6 9.4 11.2 4.2" fill="none" stroke="#0d1117" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="48" y="118" class="cmd">JSON API formula.jws.json</text>
+      <g class="bar bar-json">
+        <text x="318" y="118" class="term track">--------------------</text>
+        <text x="318" y="118" class="term hash"><tspan class="h" style="opacity:0;animation:appear .01s linear 0.73s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 0.75s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 0.78s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 0.80s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 0.83s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 0.86s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 0.88s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 0.91s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 0.93s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 0.96s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 0.99s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.01s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.04s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.06s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.09s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.12s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.14s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.17s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.19s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.22s both">#</tspan></text>
+        <text x="500" y="118" class="term pct pstep" style="opacity:0;animation:appear 0s linear 0.74s both, vanish 0s linear 0.84s forwards">  8%</text>
+        <text x="500" y="118" class="term pct pstep" style="opacity:0;animation:appear 0s linear 0.84s both, vanish 0s linear 0.95s forwards"> 27%</text>
+        <text x="500" y="118" class="term pct pstep" style="opacity:0;animation:appear 0s linear 0.95s both, vanish 0s linear 1.08s forwards"> 49%</text>
+        <text x="500" y="118" class="term pct pstep" style="opacity:0;animation:appear 0s linear 1.08s both, vanish 0s linear 1.17s forwards"> 73%</text>
+        <text x="500" y="118" class="term pct pstep" style="opacity:0;animation:appear 0s linear 1.17s both, vanish 0s linear 1.22s forwards"> 91%</text>
+        <text x="500" y="118" class="term pct pct-end pstep" style="opacity:0;animation:appear 0s linear 1.22s both">100%</text>
+      </g>
+    </g>
+    <text x="24" y="146" class="ln ln-fetch"><tspan class="eq">==&gt;</tspan><tspan class="mid"> Fetching downloads for: node, rust, human, humor, rpg-kit</tspan></text>
+    <g class="ln ln-node">
+      <g class="spin-g spin-node">
+        <text x="26" y="174" class="term sf s0">⠋</text>
+        <text x="26" y="174" class="term sf s1">⠙</text>
+        <text x="26" y="174" class="term sf s2">⠹</text>
+        <text x="26" y="174" class="term sf s3">⠸</text>
+      </g>
+      <g class="check check-node" transform="translate(24 163)">
+        <circle cx="7" cy="7" r="7" fill="#3fb950"/>
+        <path d="M3.8 7.2 6 9.4 11.2 4.2" fill="none" stroke="#0d1117" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="48" y="174" class="cmd">Bottle node (22.19.0)</text>
+      <g class="bar bar-node">
+        <text x="318" y="174" class="term track">--------------------</text>
+        <text x="318" y="174" class="term hash"><tspan class="h" style="opacity:0;animation:appear .01s linear 1.61s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.68s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.75s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.81s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.88s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.94s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.00s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.07s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.13s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.20s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.27s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.33s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.40s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.46s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.53s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.59s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.66s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.72s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.79s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.85s both">#</tspan></text>
+        <text x="500" y="174" class="term pct pstep" style="opacity:0;animation:appear 0s linear 1.65s both, vanish 0s linear 1.90s forwards">  8%</text>
+        <text x="500" y="174" class="term pct pstep" style="opacity:0;animation:appear 0s linear 1.90s both, vanish 0s linear 2.19s forwards"> 27%</text>
+        <text x="500" y="174" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.19s both, vanish 0s linear 2.50s forwards"> 49%</text>
+        <text x="500" y="174" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.50s both, vanish 0s linear 2.73s forwards"> 73%</text>
+        <text x="500" y="174" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.73s both, vanish 0s linear 2.85s forwards"> 91%</text>
+        <text x="500" y="174" class="term pct pct-end pstep" style="opacity:0;animation:appear 0s linear 2.85s both">100%</text>
+      </g>
+    </g>
+    <g class="ln ln-rust">
+      <g class="spin-g spin-rust">
+        <text x="26" y="198" class="term sf s0">⠋</text>
+        <text x="26" y="198" class="term sf s1">⠙</text>
+        <text x="26" y="198" class="term sf s2">⠹</text>
+        <text x="26" y="198" class="term sf s3">⠸</text>
+      </g>
+      <g class="check check-rust" transform="translate(24 187)">
+        <circle cx="7" cy="7" r="7" fill="#3fb950"/>
+        <path d="M3.8 7.2 6 9.4 11.2 4.2" fill="none" stroke="#0d1117" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="48" y="198" class="cmd">Bottle rust (1.89.0)</text>
+      <g class="bar bar-rust">
+        <text x="318" y="198" class="term track">--------------------</text>
+        <text x="318" y="198" class="term hash"><tspan class="h" style="opacity:0;animation:appear .01s linear 1.66s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.77s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.87s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.98s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.09s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.20s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.30s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.41s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.52s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.62s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.73s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.84s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.95s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.06s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.16s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.27s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.38s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.49s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.59s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.70s both">#</tspan></text>
+        <text x="500" y="198" class="term pct pstep" style="opacity:0;animation:appear 0s linear 1.72s both, vanish 0s linear 2.13s forwards">  8%</text>
+        <text x="500" y="198" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.13s both, vanish 0s linear 2.60s forwards"> 27%</text>
+        <text x="500" y="198" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.60s both, vanish 0s linear 3.12s forwards"> 49%</text>
+        <text x="500" y="198" class="term pct pstep" style="opacity:0;animation:appear 0s linear 3.12s both, vanish 0s linear 3.51s forwards"> 73%</text>
+        <text x="500" y="198" class="term pct pstep" style="opacity:0;animation:appear 0s linear 3.51s both, vanish 0s linear 3.70s forwards"> 91%</text>
+        <text x="500" y="198" class="term pct pct-end pstep" style="opacity:0;animation:appear 0s linear 3.70s both">100%</text>
+      </g>
+    </g>
+    <g class="ln ln-human">
+      <g class="spin-g spin-human">
+        <text x="26" y="222" class="term sf s0">⠋</text>
+        <text x="26" y="222" class="term sf s1">⠙</text>
+        <text x="26" y="222" class="term sf s2">⠹</text>
+        <text x="26" y="222" class="term sf s3">⠸</text>
+      </g>
+      <g class="check check-human" transform="translate(24 211)">
+        <circle cx="7" cy="7" r="7" fill="#3fb950"/>
+        <path d="M3.8 7.2 6 9.4 11.2 4.2" fill="none" stroke="#0d1117" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="48" y="222" class="cmd">Bottle human (1.0.0)</text>
+      <g class="bar bar-human">
+        <text x="318" y="222" class="term track">--------------------</text>
+        <text x="318" y="222" class="term hash"><tspan class="h" style="opacity:0;animation:appear .01s linear 1.63s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.71s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.79s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.87s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.95s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.03s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.11s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.19s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.28s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.36s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.44s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.52s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.60s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.68s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.76s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.84s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.92s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 4.37s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 4.46s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 4.55s both">#</tspan></text>
+        <text x="500" y="222" class="term pct pstep" style="opacity:0;animation:appear 0s linear 1.67s both, vanish 0s linear 2.03s forwards">  8%</text>
+        <text x="500" y="222" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.03s both, vanish 0s linear 2.44s forwards"> 31%</text>
+        <text x="500" y="222" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.44s both, vanish 0s linear 2.92s forwards"> 58%</text>
+        <text x="500" y="222" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.92s both, vanish 0s linear 4.28s forwards"> 87%</text>
+        <text x="500" y="222" class="term pct pct-end pstep" style="opacity:0;animation:appear 0s linear 4.28s both">100%</text>
+      </g>
+      <text x="318" y="222" class="term note note-human"># finally stable</text>
+    </g>
+    <g class="ln ln-humor">
+      <g class="spin-g spin-humor">
+        <text x="26" y="246" class="term sf s0">⠋</text>
+        <text x="26" y="246" class="term sf s1">⠙</text>
+        <text x="26" y="246" class="term sf s2">⠹</text>
+        <text x="26" y="246" class="term sf s3">⠸</text>
+      </g>
+      <g class="check check-humor" transform="translate(24 235)">
+        <circle cx="7" cy="7" r="7" fill="#3fb950"/>
+        <path d="M3.8 7.2 6 9.4 11.2 4.2" fill="none" stroke="#0d1117" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="48" y="246" class="cmd">Bottle humor (3.2.1)</text>
+      <g class="bar bar-humor">
+        <text x="318" y="246" class="term track">--------------------</text>
+        <text x="318" y="246" class="term hash"><tspan class="h" style="opacity:0;animation:appear .01s linear 1.64s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.72s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.81s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.89s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.98s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.06s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.15s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.23s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.31s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.40s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.48s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.57s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.66s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.74s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.83s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.91s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.00s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.08s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.17s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 3.25s both">#</tspan></text>
+        <text x="500" y="246" class="term pct pstep" style="opacity:0;animation:appear 0s linear 1.69s both, vanish 0s linear 2.01s forwards">  8%</text>
+        <text x="500" y="246" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.01s both, vanish 0s linear 2.38s forwards"> 27%</text>
+        <text x="500" y="246" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.38s both, vanish 0s linear 2.79s forwards"> 49%</text>
+        <text x="500" y="246" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.79s both, vanish 0s linear 3.10s forwards"> 73%</text>
+        <text x="500" y="246" class="term pct pstep" style="opacity:0;animation:appear 0s linear 3.10s both, vanish 0s linear 3.25s forwards"> 91%</text>
+        <text x="500" y="246" class="term pct pct-end pstep" style="opacity:0;animation:appear 0s linear 3.25s both">100%</text>
+      </g>
+      <text x="318" y="246" class="term note note-humor">--with-piadas</text>
+    </g>
+    <g class="ln ln-rpg">
+      <g class="spin-g spin-rpg">
+        <text x="26" y="270" class="term sf s0">⠋</text>
+        <text x="26" y="270" class="term sf s1">⠙</text>
+        <text x="26" y="270" class="term sf s2">⠹</text>
+        <text x="26" y="270" class="term sf s3">⠸</text>
+      </g>
+      <g class="check check-rpg" transform="translate(24 259)">
+        <circle cx="7" cy="7" r="7" fill="#3fb950"/>
+        <path d="M3.8 7.2 6 9.4 11.2 4.2" fill="none" stroke="#0d1117" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="48" y="270" class="cmd">Bottle rpg-kit (0.2.0)</text>
+      <g class="bar bar-rpg">
+        <text x="318" y="270" class="term track">--------------------</text>
+        <text x="318" y="270" class="term hash"><tspan class="h" style="opacity:0;animation:appear .01s linear 1.59s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.64s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.68s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.72s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.76s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.81s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.85s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.89s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.93s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 1.98s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.02s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.06s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.10s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.15s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.19s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.23s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.27s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.31s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.36s both">#</tspan><tspan class="h" style="opacity:0;animation:appear .01s linear 2.40s both">#</tspan></text>
+        <text x="500" y="270" class="term pct pstep" style="opacity:0;animation:appear 0s linear 1.62s both, vanish 0s linear 1.78s forwards">  8%</text>
+        <text x="500" y="270" class="term pct pstep" style="opacity:0;animation:appear 0s linear 1.78s both, vanish 0s linear 1.97s forwards"> 27%</text>
+        <text x="500" y="270" class="term pct pstep" style="opacity:0;animation:appear 0s linear 1.97s both, vanish 0s linear 2.17s forwards"> 49%</text>
+        <text x="500" y="270" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.17s both, vanish 0s linear 2.32s forwards"> 73%</text>
+        <text x="500" y="270" class="term pct pstep" style="opacity:0;animation:appear 0s linear 2.32s both, vanish 0s linear 2.40s forwards"> 91%</text>
+        <text x="500" y="270" class="term pct pct-end pstep" style="opacity:0;animation:appear 0s linear 2.40s both">100%</text>
+      </g>
+    </g>
+    <text x="24" y="302" class="ln ln-sum"><tspan class="beer">🍺  5 installed</tspan><tspan class="mid">  </tspan><tspan class="ready">▸ bem-vindo(a)! 🕶️</tspan></text>
+    <text x="24" y="324" class="ln ln-keg"><tspan class="mid">    human is keg-only — macOS already shipped one</tspan></text>
 
-    <text x="24" y="144" class="ln" style="animation-delay:1s"><tspan class="prompt">$ </tspan><tspan class="cmd">./boot.sh</tspan></text>
-    <text x="24" y="168" class="ln" style="animation-delay:1.3s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  POST .............................. </tspan><tspan class="val">passed</tspan></text>
-    <text x="24" y="192" class="ln" style="animation-delay:1.6s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  mount /dev/felipe ................. </tspan><tspan class="val">ready</tspan></text>
-    <text x="24" y="216" class="ln" style="animation-delay:1.9s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  load stack: typescript rust node .. </tspan><tspan class="val">done</tspan></text>
-    <text x="24" y="240" class="ln" style="animation-delay:2.2s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  init rpg-tooling engines .......... </tspan><tspan class="val">online</tspan></text>
-    <text x="24" y="264" class="ln" style="animation-delay:2.5s"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  system ready ▸ </tspan><tspan class="ready">bem-vindo(a)! 🕶️</tspan></text>
-
-    <text x="24" y="312" class="ln" style="animation-delay:3s"><tspan class="prompt">$ </tspan><tspan class="cmd">cat felipe.ts</tspan></text>
-    <text x="24" y="336" class="ln" style="animation-delay:3.3s"><tspan class="kw">const </tspan><tspan class="var">felipe_lippelt</tspan><tspan class="punc">: </tspan><tspan class="type">Dev</tspan><tspan class="punc"> = {</tspan></text>
-    <text x="24" y="360" class="ln" style="animation-delay:3.55s"><tspan class="key">&#160;&#160;pronomes</tspan><tspan class="punc">: </tspan><tspan class="str">"ele/dele"</tspan><tspan class="punc">,</tspan></text>
-    <text x="24" y="384" class="ln" style="animation-delay:3.8s"><tspan class="key">&#160;&#160;code</tspan><tspan class="punc">: [</tspan><tspan class="str">"TypeScript", "JavaScript", "Rust", "Python", "Dart"</tspan><tspan class="punc">],</tspan></text>
-    <text x="24" y="408" class="ln" style="animation-delay:4.05s"><tspan class="key">&#160;&#160;tools</tspan><tspan class="punc">: [</tspan><tspan class="str">"React", "Node.js", "Astro", "Tauri", "Vite", "Socket.io"</tspan><tspan class="punc">],</tspan></text>
-    <text x="24" y="432" class="ln" style="animation-delay:4.3s"><tspan class="key">&#160;&#160;focus</tspan><tspan class="punc">: </tspan><tspan class="str">"ferramentas para RPG de mesa — VTTs, props imersivos e SRDs em código"</tspan><tspan class="punc">,</tspan></text>
-    <text x="24" y="456" class="ln" style="animation-delay:4.55s"><tspan class="key">&#160;&#160;aprendendo</tspan><tspan class="punc">: </tspan><tspan class="str">"Rust + design de sistemas de RPG"</tspan><tspan class="punc">,</tspan></text>
-    <text x="24" y="480" class="ln" style="animation-delay:4.8s"><tspan class="punc">};</tspan></text>
+    <text x="24" y="360" class="ln ln-cat"><tspan class="prompt">$ </tspan><tspan class="cmd">cat felipe.ts</tspan></text>
+    <text x="24" y="384" class="ln ln-const"><tspan class="kw">const </tspan><tspan class="var">felipe_lippelt</tspan><tspan class="punc">: </tspan><tspan class="type">Dev</tspan><tspan class="punc"> = {</tspan></text>
+    <text x="24" y="408" class="ln ln-pronomes"><tspan class="key">&#160;&#160;pronomes</tspan><tspan class="punc">: </tspan><tspan class="str">"ele/dele"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="432" class="ln ln-code"><tspan class="key">&#160;&#160;code</tspan><tspan class="punc">: [</tspan><tspan class="str">"TypeScript", "JavaScript", "Rust", "Python", "Dart"</tspan><tspan class="punc">],</tspan></text>
+    <text x="24" y="456" class="ln ln-tools"><tspan class="key">&#160;&#160;tools</tspan><tspan class="punc">: [</tspan><tspan class="str">"React", "Node.js", "Astro", "Tauri", "Vite", "Socket.io"</tspan><tspan class="punc">],</tspan></text>
+    <text x="24" y="480" class="ln ln-focus"><tspan class="key">&#160;&#160;focus</tspan><tspan class="punc">: </tspan><tspan class="str">"ferramentas para RPG de mesa — VTTs, props imersivos e SRDs em código"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="504" class="ln ln-aprendendo"><tspan class="key">&#160;&#160;aprendendo</tspan><tspan class="punc">: </tspan><tspan class="str">"Rust + design de sistemas de RPG"</tspan><tspan class="punc">,</tspan></text>
+    <text x="24" y="528" class="ln ln-end"><tspan class="punc">};</tspan></text>
   </g>
 
-  <rect class="cursor" x="24" y="494" width="9" height="4"/>
+  <rect class="cursor" x="24" y="542" width="9" height="4"/>
 </svg>
