@@ -43,12 +43,12 @@ def _bump_tenth(version: str, steps: int) -> str:
     return f"{major}.{minor}.{patch}"
 
 
-def father_version(today: date | None = None) -> str:
+def daughter_version(today: date | None = None) -> str:
     cfg = json.loads(HUMAN_JSON.read_text())
-    father = cfg.get("father") or {}
-    base = father.get("version", "1.3.0")
-    month = int(father.get("month", 10))
-    day = int(father.get("day", 25))
+    daughter = cfg.get("daughter") or {}
+    base = daughter.get("version", "1.3.0")
+    month = int(daughter.get("month", 10))
+    day = int(daughter.get("day", 25))
     today = today or date.today()
     first = date(2026, month, day)
     if today < first:
@@ -122,7 +122,7 @@ def esc(s: str) -> str:
 
 def build() -> str:
     version = human_version()
-    dad = father_version()
+    kid = daughter_version()
 
     y_whoami, y_user = 72, 96
     y_boot, y_post, y_mount = 144, 168, 192
@@ -138,7 +138,7 @@ def build() -> str:
         dict(id="sarcasm", label="Bottle sarcasm (4.2.0)",                  t0=4.35, t1=6.45, stall=None, reverse=False, adhd=False, note="--as-defense-mechanism"),
         dict(id="brain",   label="Bottle brain (1.0.0)",                    t0=4.35, t1=6.90, stall=None, reverse=False, adhd=False, note="--with-hiperfocus"),
         dict(id="creativity", label="Bottle creativity (0.9.0)",             t0=4.35, t1=5.90, stall=None, reverse=False, adhd=False, note="--unbounded"),
-        dict(id="father",  label=f"Bottle father ({dad})",                  t0=4.35, t1=6.20, stall=None, reverse=False, adhd=False, note="# daughter"),
+        dict(id="daughter", label=f"Bottle daughter ({kid})",               t0=4.35, t1=6.20, stall=None, reverse=False, adhd=False, note="# papa"),
         dict(id="adhd",    label="Bottle adhd (0.4.1)",                     t0=4.35, t1=5.15, stall=None, reverse=False, adhd=True,  note=None, ribbon=True),
         dict(id="totb",    label="Bottle thinking-outside-the-box (0.1.0)", t0=4.35, t1=7.35, stall=None, reverse=True,  adhd=False, note="# poured sideways"),
         dict(id="goblin",  label="Bottle dice-goblin (13.0.0)",             t0=4.35, t1=6.65, stall=None, reverse=False, adhd=False, note="# shiny math rocks"),
@@ -218,7 +218,7 @@ def build() -> str:
         ("ln-json", 3.45), ("ln-fetch1", 4.10), ("ln-fetch2", 4.20),
         ("ln-rpg", 4.35), ("ln-human", 4.35), ("ln-humor", 4.35),
         ("ln-sarcasm", 4.35), ("ln-brain", 4.35), ("ln-creativity", 4.35),
-        ("ln-father", 4.35), ("ln-adhd", 4.35),
+        ("ln-daughter", 4.35), ("ln-adhd", 4.35),
         ("ln-totb", 4.35), ("ln-goblin", 4.35),
         ("ln-sum", 8.40), ("ln-keg", 8.60),
         ("ln-cat", 9.00), ("ln-const", 9.30), ("ln-pronouns", 9.55),
@@ -327,7 +327,7 @@ def build() -> str:
 
     aria = (
         "Terminal: $ whoami and ./boot.sh; then $ brew install rpg "
-        "human humor sarcasm brain creativity father adhd thinking-outside-the-box dice-goblin "
+        "human humor sarcasm brain creativity daughter adhd thinking-outside-the-box dice-goblin "
         "with # progress bars, percents and green checks; then $ cat felipe.ts "
         "prints const felipe_lippelt: Dev = { pronouns, role, location, langs, code, tools, focus, learning }"
     )
@@ -359,12 +359,12 @@ def build() -> str:
     <text x="24" y="{y_rpg}" class="ln ln-engines"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  init rpg-tooling engines .......... </tspan><tspan class="val">online</tspan></text>
     <text x="24" y="{y_ready}" class="ln ln-ready"><tspan class="ok">[ OK ]</tspan><tspan class="mid">  system ready ▸ </tspan><tspan class="ready">welcome! 🕶️</tspan></text>
 
-    <text x="24" y="{y_brew1}" class="ln ln-brew1"><tspan class="prompt">$ </tspan><tspan class="cmd">brew install rpg human humor sarcasm brain creativity father \\</tspan></text>
+    <text x="24" y="{y_brew1}" class="ln ln-brew1"><tspan class="prompt">$ </tspan><tspan class="cmd">brew install rpg human humor sarcasm brain creativity daughter \\</tspan></text>
     <text x="24" y="{y_brew2}" class="ln ln-brew2"><tspan class="cmd">               adhd thinking-outside-the-box dice-goblin</tspan></text>
     <text x="24" y="{y_upd}" class="ln ln-upd"><tspan class="eq">==&gt;</tspan><tspan class="mid"> Updating Homebrew...</tspan></text>
 {row_group(json_row, "ln-json")}
     <text x="24" y="{y_fetch1}" class="ln ln-fetch1"><tspan class="eq">==&gt;</tspan><tspan class="mid"> Fetching downloads for: rpg, human, humor, sarcasm, brain,</tspan></text>
-    <text x="24" y="{y_fetch2}" class="ln ln-fetch2"><tspan class="mid">    creativity, father, adhd, thinking-outside-the-box, dice-goblin</tspan></text>
+    <text x="24" y="{y_fetch2}" class="ln ln-fetch2"><tspan class="mid">    creativity, daughter, adhd, thinking-outside-the-box, dice-goblin</tspan></text>
 {bottle_rows}
     <text x="24" y="{y_sum}" class="ln ln-sum"><tspan class="beer">🍺  10 installed</tspan></text>
     <text x="24" y="{y_keg}" class="ln ln-keg"><tspan class="mid">    human is keg-only — macOS already shipped one</tspan></text>
@@ -392,10 +392,10 @@ def main() -> None:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     previous = OUT.read_text() if OUT.exists() else ""
     if previous == svg:
-        print(f"unchanged {OUT} (human {human_version()}, father {father_version()})")
+        print(f"unchanged {OUT} (human {human_version()}, daughter {daughter_version()})")
         return
     OUT.write_text(svg)
-    print(f"wrote {OUT} ({OUT.stat().st_size} bytes, human {human_version()}, father {father_version()})")
+    print(f"wrote {OUT} ({OUT.stat().st_size} bytes, human {human_version()}, daughter {daughter_version()})")
 
 
 if __name__ == "__main__":
