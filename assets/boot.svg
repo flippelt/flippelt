@@ -400,7 +400,7 @@
         <text x="560" y="652" class="term pct pstep" style="opacity:0;animation:appear 0s linear 5.76s both, vanish 0s linear 5.90s forwards"> 91%</text>
         <text x="560" y="652" class="term pct pct-end pstep" style="opacity:0;animation:appear 0s linear 5.90s both">100%</text>
       </g>
-      <text x="408" y="652" class="term note note-creativity"># --unbounded</text>
+      <text x="408" y="652" class="term note note-creativity">--unbounded</text>
     </g>
     <g class="ln ln-father">
       <g class="spin-g spin-father">

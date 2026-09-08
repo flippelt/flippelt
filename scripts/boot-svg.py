@@ -140,7 +140,7 @@ def build() -> str:
         dict(id="humor",   label="Bottle humor (3.2.1)",                    t0=4.35, t1=6.10, stall=None, reverse=False, adhd=False, note="--with-piadas"),
         dict(id="sarcasm", label="Bottle sarcasm (4.2.0)",                  t0=4.35, t1=6.45, stall=None, reverse=False, adhd=False, note="--as-defense-mechanism"),
         dict(id="brain",   label="Bottle brain (1.0.0)",                    t0=4.35, t1=6.90, stall=None, reverse=False, adhd=False, note="--with-hiperfocus"),
-        dict(id="creativity", label="Bottle creativity (0.9.0)",             t0=4.35, t1=5.90, stall=None, reverse=False, adhd=False, note="# --unbounded"),
+        dict(id="creativity", label="Bottle creativity (0.9.0)",             t0=4.35, t1=5.90, stall=None, reverse=False, adhd=False, note="--unbounded"),
         dict(id="father",  label=f"Bottle father ({dad})",                  t0=4.35, t1=6.20, stall=None, reverse=False, adhd=False, note="# daughter"),
         dict(id="adhd",    label="Bottle adhd (0.4.1)",                     t0=4.35, t1=5.15, stall=None, reverse=False, adhd=True,  note=None, ribbon=True),
         dict(id="totb",    label="Bottle thinking-outside-the-box (0.1.0)", t0=4.35, t1=7.35, stall=None, reverse=True,  adhd=False, note="# poured sideways"),
