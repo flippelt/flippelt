@@ -68,8 +68,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  # 🎂 human (3.7.0 = 37 anos) e daughter (1.3.0, aniversário 25/10). +0.1 nas datas via scripts/human.json.
-  # Só agenda/manual — não roda no push, pra não entrar em loop com o commit anual.
+  # 🎂 human + daughter versions (patch = months since birthday). Daily cron; commits only when the SVG changes.
+  # Skip on push so a version bump cannot retrigger itself.
   human-version:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
@@ -90,5 +90,5 @@ jobs:
             echo "human version unchanged"
             exit 0
           fi
-          git commit -m "chore: bump human version (aniversário)"
+          git commit -m "chore: bump boot.svg versions"
           git push

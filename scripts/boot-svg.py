@@ -20,6 +20,26 @@ ICON_X = 26
 CHECK_X = 24
 
 
+def _last_anniversary(today: date, month: int, day: int) -> date:
+    this_year = date(today.year, month, day)
+    if today >= this_year:
+        return this_year
+    return date(today.year - 1, month, day)
+
+
+def _months_since(start: date, end: date) -> int:
+    months = (end.year - start.year) * 12 + (end.month - start.month)
+    if end.day < start.day:
+        months -= 1
+    return months
+
+
+def _semver(major: int, minor: int, patch: int) -> str:
+    major += minor // 10
+    minor %= 10
+    return f"{major}.{minor}.{patch}"
+
+
 def human_version(today: date | None = None) -> str:
     cfg = json.loads(HUMAN_JSON.read_text())
     fallback = cfg.get("fallback_version", "3.7.0")
@@ -29,18 +49,10 @@ def human_version(today: date | None = None) -> str:
     today = today or date.today()
     y, m, d = (int(p) for p in raw.split("-"))
     born = date(y, m, d)
-    age = today.year - born.year - (
-        (today.month, today.day) < (born.month, born.day)
-    )
-    return f"{age // 10}.{age % 10}.0"
-
-
-def _bump_tenth(version: str, steps: int) -> str:
-    major, minor, patch = (int(p) for p in version.split("."))
-    minor += steps
-    major += minor // 10
-    minor %= 10
-    return f"{major}.{minor}.{patch}"
+    last = _last_anniversary(today, born.month, born.day)
+    years = last.year - born.year
+    months = _months_since(last, today)
+    return _semver(years // 10, years % 10, months)
 
 
 def daughter_version(today: date | None = None) -> str:
@@ -49,14 +61,13 @@ def daughter_version(today: date | None = None) -> str:
     base = daughter.get("version", "1.3.0")
     month = int(daughter.get("month", 10))
     day = int(daughter.get("day", 25))
+    as_of_year = int(daughter.get("as_of_year", 2025))
     today = today or date.today()
-    first = date(2026, month, day)
-    if today < first:
-        return base
-    steps = 1 + (today.year - first.year)
-    if (today.month, today.day) < (month, day):
-        steps -= 1
-    return _bump_tenth(base, steps)
+    last = _last_anniversary(today, month, day)
+    major, minor, _patch = (int(p) for p in base.split("."))
+    minor += last.year - as_of_year
+    months = _months_since(last, today)
+    return _semver(major, minor, months)
 
 
 def hashes_for(row: dict) -> list[float]:
