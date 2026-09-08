@@ -198,7 +198,7 @@
         <text x="560" y="454" class="term pct pstep" style="opacity:0;animation:appear 0s linear 5.26s both, vanish 0s linear 5.35s forwards"> 91%</text>
         <text x="560" y="454" class="term pct pct-end pstep" style="opacity:0;animation:appear 0s linear 5.35s both">100%</text>
       </g>
-      <text x="408" y="454" class="term note note-rpg"># mesa</text>
+      <text x="408" y="454" class="term note note-rpg"># How do you want to do this?</text>
     </g>
     <g class="ln ln-human">
       <g class="spin-g spin-human">

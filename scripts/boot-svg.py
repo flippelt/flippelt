@@ -132,7 +132,7 @@ def build() -> str:
     bottle_y0, bottle_dy = 454, 22
 
     packages = [
-        dict(id="rpg",     label="Bottle rpg (0.5.0)",                      t0=4.35, t1=5.35, stall=None, reverse=False, adhd=False, note="# mesa"),
+        dict(id="rpg",     label="Bottle rpg (0.5.0)",                      t0=4.35, t1=5.35, stall=None, reverse=False, adhd=False, note="# How do you want to do this?"),
         dict(id="human",   label=f"Bottle human ({version})",               t0=4.35, t1=8.15, stall=(6.50, 87, 7.85), reverse=False, adhd=False, note="# finally stable"),
         dict(id="humor",   label="Bottle humor (3.2.1)",                    t0=4.35, t1=6.10, stall=None, reverse=False, adhd=False, note="--with-piadas"),
         dict(id="sarcasm", label="Bottle sarcasm (4.2.0)",                  t0=4.35, t1=6.45, stall=None, reverse=False, adhd=False, note="--as-defense-mechanism"),
