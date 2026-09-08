@@ -138,7 +138,7 @@ def build() -> str:
         dict(id="sarcasm", label="Bottle sarcasm (4.2.0)",                  t0=4.35, t1=6.45, stall=None, reverse=False, adhd=False, note="--as-defense-mechanism"),
         dict(id="brain",   label="Bottle brain (1.0.0)",                    t0=4.35, t1=6.90, stall=None, reverse=False, adhd=False, note="--with-hiperfocus"),
         dict(id="creativity", label="Bottle creativity (0.9.0)",             t0=4.35, t1=5.90, stall=None, reverse=False, adhd=False, note="--unbounded"),
-        dict(id="daughter", label=f"Bottle daughter ({kid})",               t0=4.35, t1=6.20, stall=None, reverse=False, adhd=False, note="# papa"),
+        dict(id="daughter", label=f"Bottle daughter ({kid})",               t0=4.35, t1=6.20, stall=None, reverse=False, adhd=False, note="# undocumented feature"),
         dict(id="adhd",    label="Bottle adhd (0.4.1)",                     t0=4.35, t1=5.15, stall=None, reverse=False, adhd=True,  note=None, ribbon=True),
         dict(id="totb",    label="Bottle thinking-outside-the-box (0.1.0)", t0=4.35, t1=7.35, stall=None, reverse=True,  adhd=False, note="# poured sideways"),
         dict(id="goblin",  label="Bottle dice-goblin (13.0.0)",             t0=4.35, t1=6.65, stall=None, reverse=False, adhd=False, note="# shiny math rocks"),

@@ -341,7 +341,7 @@
         <text x="560" y="586" class="term pct pstep" style="opacity:0;animation:appear 0s linear 6.03s both, vanish 0s linear 6.20s forwards"> 91%</text>
         <text x="560" y="586" class="term pct pct-end pstep" style="opacity:0;animation:appear 0s linear 6.20s both">100%</text>
       </g>
-      <text x="408" y="586" class="term note note-daughter"># papa</text>
+      <text x="408" y="586" class="term note note-daughter"># undocumented feature</text>
     </g>
     <g class="ln ln-adhd">
       <g class="spin-g spin-adhd">
