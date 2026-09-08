@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/boot.svg" alt="Terminal: $ brew install node rust human humor rpg-kit (barras #, %, checks verdes; human trava em 87% e é keg-only) seguido de $ cat felipe.ts imprimindo const felipe_lippelt: Dev = { pronomes, code, tools, focus, aprendendo }" width="720"/>
+  <img src="assets/boot.svg" alt="Terminal: $ whoami e ./boot.sh; depois $ brew install node rust python rpg human sarcasm brain adhd thinking-outside-the-box dice-goblin (barras #, %, checks verdes); em seguida $ cat felipe.ts imprimindo const felipe_lippelt: Dev = { pronomes, code, tools, focus, aprendendo }" width="720"/>
 </p>
 
 <p align="center"><em>
