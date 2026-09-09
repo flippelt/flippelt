@@ -313,7 +313,7 @@ def build() -> str:
         )
 
     def d20_icon() -> str:
-        # Hex icosahedron, ~16px. Fills on the polygons (not the group) so
+        # Hex icosahedron, ~16px, no face number. Fills on the polygons so
         # .note { fill } on the parent does not grey them out.
         return (
             '<polygon fill="#4a0f12" points="8,0.3 15.1,4.2 15.1,11.8 8,15.7 0.9,11.8 0.9,4.2"/>'
@@ -323,19 +323,25 @@ def build() -> str:
             '<polygon fill="#9e1a1a" points="1.2,4.2 1.2,11.8 8,8"/>'
             '<polygon fill="#b62324" points="14.8,11.8 8,15.5 8,8"/>'
             '<polygon fill="#6e1014" points="1.2,11.8 8,15.5 8,8"/>'
-            '<text x="8" y="9.7" text-anchor="middle" fill="#fff5f5" font-size="5.2" '
-            'font-family="Menlo, ui-monospace, monospace" font-weight="700">20</text>'
         )
 
-    def red_d20s(row_id: str, text_x: int, y: int, text: str) -> str:
-        # 14px mono ≈ 0.6em advance; gap after the note.
-        x0 = text_x + round(len(text) * 8.4) + 8
+    def flanked_note(row: dict) -> str:
+        # One d20 on each end of the note: [die] # shiny math rocks [die]
+        text = row["note"]
+        y = row["y"]
+        rid = row["id"]
+        die_w, gap = 16, 5
         top = y - 13
+        text_x = BAR_X + die_w + gap
+        right_x = text_x + round(len(text) * 8.4) + gap
         icon = d20_icon()
         return (
-            f'      <g class="note note-{row_id}" transform="translate({x0} {top})">\n'
+            f'      <g class="note note-{rid}" transform="translate({BAR_X} {top})">\n'
             f'        <g transform="rotate(-16 8 8)">{icon}</g>\n'
-            f'        <g transform="translate(15 1) rotate(14 8 8)">{icon}</g>\n'
+            f'      </g>\n'
+            f'      <text x="{text_x}" y="{y}" class="term note note-{rid}">{esc(text)}</text>\n'
+            f'      <g class="note note-{rid}" transform="translate({right_x} {top})">\n'
+            f'        <g transform="rotate(14 8 8)">{icon}</g>\n'
             f'      </g>\n'
         )
 
@@ -344,13 +350,12 @@ def build() -> str:
             return orange_ribbon(row["id"], BAR_X, row["y"])
         if not row.get("note"):
             return ""
-        out = (
+        if row.get("d20"):
+            return flanked_note(row)
+        return (
             f'      <text x="{BAR_X}" y="{row["y"]}" class="term note note-{row["id"]}">'
             f'{esc(row["note"])}</text>\n'
         )
-        if row.get("d20"):
-            out += red_d20s(row["id"], BAR_X, row["y"], row["note"])
-        return out
 
     def row_group(row: dict, ln_class: str) -> str:
         body = [
