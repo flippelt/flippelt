@@ -83,5 +83,5 @@
 <p align="center">
   <a href="https://flippelt.github.io" target="_blank"><img src="https://img.shields.io/badge/-Portfolio-222222?style=for-the-badge&logo=githubpages&logoColor=FFFFFF" alt="Portfolio"/></a>
   <a href="mailto:lippelt.f@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=FFFFFF" alt="Gmail"/></a>
-  <a href="https://www.linkedin.com/in/flippelt/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=Linkedin&logoColor=FFFFFF" alt="LinkedIn"/></a>
+  <a href="https://www.linkedin.com/in/lippeltf/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=Linkedin&logoColor=FFFFFF" alt="LinkedIn"/></a>
 </p>
