@@ -77,7 +77,10 @@ jobs:
     permissions:
       contents: write
     steps:
+      # Optional write deploy key: ruleset-protected main rejects GITHUB_TOKEN pushes.
       - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
       - name: Refresh boot.svg from birthday
         run: python3 scripts/boot-svg.py
       - name: Commit if the human version changed
