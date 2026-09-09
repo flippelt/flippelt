@@ -312,53 +312,32 @@ def build() -> str:
             f'      </g>\n'
         )
 
-    def d20_icon(kind: str = "a") -> str:
-        # Orthographic icosahedron (16x20), no face number. A regular hex of
-        # 6 triangles reads as an isometric cube at this size; these are
-        # real 20-face projections. Fills on the polygons so .note { fill }
-        # on the parent does not grey them out.
-        faces_a = (
-            "14.23,14.47 8.35,9.73 5.67,17.07",
-            "14.23,14.47 14.39,5.53 8.35,9.73",
-            "1.61,14.47 5.67,17.07 0.55,9.73",
-            "5.94,2.60 1.77,5.53 0.55,9.73",
-            "10.33,2.93 5.94,2.60 14.39,5.53",
-            "10.06,17.40 1.61,14.47 5.67,17.07",
-            "10.33,2.93 5.94,2.60 1.77,5.53",
-            "10.33,2.93 15.45,10.27 14.39,5.53",
-            "7.65,10.27 1.77,5.53 1.61,14.47",
-            "7.65,10.27 10.33,2.93 1.77,5.53",
+    def d20_icon() -> str:
+        # Binding of Isaac D20: 2D hex + triangle mesh, no face number.
+        # Flat fills on the polygons so .note { fill } does not grey them out.
+        stroke = 'stroke="#3d0a0c" stroke-width="0.55" stroke-linejoin="round"'
+        faces = (
+            ("#e53935", "8,0.7 0.9,4.9 8,5.1"),
+            ("#ef5350", "8,0.7 15.1,4.9 8,5.1"),
+            ("#c62828", "0.9,4.9 8,5.1 4.1,11.5"),
+            ("#d32f2f", "15.1,4.9 8,5.1 11.9,11.5"),
+            ("#e53935", "8,5.1 4.1,11.5 11.9,11.5"),
+            ("#8e1518", "0.9,4.9 0.9,13.1 4.1,11.5"),
+            ("#9a181c", "15.1,4.9 15.1,13.1 11.9,11.5"),
+            ("#7a1014", "0.9,13.1 8,17.3 4.1,11.5"),
+            ("#6d0e12", "15.1,13.1 8,17.3 11.9,11.5"),
+            ("#8e1518", "4.1,11.5 11.9,11.5 8,17.3"),
         )
-        fills_a = (
-            "#f65249", "#ce413b", "#9d2b2a", "#791c1d", "#791c1d",
-            "#791c1d", "#f45148", "#9d2b2a", "#ce413b", "#f65249",
-        )
-        faces_b = (
-            "11.47,15.35 14.30,7.23 6.59,8.82",
-            "11.47,15.35 6.59,8.82 2.97,15.35",
-            "13.03,4.65 7.55,2.21 14.30,7.23",
-            "1.70,12.77 2.97,15.35 0.55,7.23",
-            "15.45,12.77 11.47,15.35 8.45,17.79",
-            "13.03,4.65 15.45,12.77 14.30,7.23",
-            "8.45,17.79 1.70,12.77 2.97,15.35",
-            "13.03,4.65 7.55,2.21 4.53,4.65",
-            "9.41,11.18 13.03,4.65 4.53,4.65",
-            "9.41,11.18 4.53,4.65 1.70,12.77",
-        )
-        fills_b = (
-            "#d7443e", "#e24942", "#791c1d", "#791c1d", "#e84c44",
-            "#791c1d", "#791c1d", "#ed4e46", "#e24942", "#d7443e",
-        )
-        faces, fills = (faces_a, fills_a) if kind == "a" else (faces_b, fills_b)
         polys = "".join(
-            f'<polygon fill="{fill}" stroke="#2a0709" stroke-width="0.5" '
-            f'stroke-linejoin="round" points="{pts}"/>'
-            for fill, pts in zip(fills, faces)
+            f'<polygon fill="{fill}" {stroke} points="{pts}"/>'
+            for fill, pts in faces
         )
-        return polys
+        return polys + '<polygon fill="#ffcdd2" points="7.2,1.8 8.8,1.8 7.6,3.4"/>'
 
     def flanked_note(row: dict) -> str:
         # # [d20] shiny math rocks [d20] — dice after the hash, one on each end.
+        # Die is top-heavy (Isaac hex). 14px text sits ~11px above baseline;
+        # y-10 puts the body of the die on the x-height instead of the cap.
         raw = row["note"]
         if raw.startswith("#"):
             prefix, body = "#", raw[1:].lstrip()
@@ -367,7 +346,8 @@ def build() -> str:
         y = row["y"]
         rid = row["id"]
         char_w, die_w, gap = 8.4, 16, 4
-        top = y - 16
+        top = y - 10
+        icon = d20_icon()
         x = BAR_X
         parts = []
         if prefix:
@@ -376,7 +356,7 @@ def build() -> str:
             )
             x += len(prefix) * char_w + gap
         parts.append(
-            f'      <g class="note note-{rid}" transform="translate({x:.0f} {top})">{d20_icon("a")}</g>'
+            f'      <g class="note note-{rid}" transform="translate({x:.0f} {top})">{icon}</g>'
         )
         x += die_w + gap
         parts.append(
@@ -384,7 +364,7 @@ def build() -> str:
         )
         x += len(body) * char_w + gap
         parts.append(
-            f'      <g class="note note-{rid}" transform="translate({x:.0f} {top})">{d20_icon("b")}</g>'
+            f'      <g class="note note-{rid}" transform="translate({x:.0f} {top})">{icon}</g>'
         )
         return "\n".join(parts) + "\n"
 
