@@ -336,8 +336,9 @@ def build() -> str:
 
     def flanked_note(row: dict) -> str:
         # # [d20] shiny math rocks [d20] — dice after the hash, one on each end.
-        # Die is top-heavy (Isaac hex). 14px text sits ~11px above baseline;
-        # y-10 puts the body of the die on the x-height instead of the cap.
+        # Die bbox y 0.7..17.3 (center 9). 14px text optical center ~4px above
+        # baseline; y-13 sits on the line without hanging from the cap or
+        # dropping below the x-height.
         raw = row["note"]
         if raw.startswith("#"):
             prefix, body = "#", raw[1:].lstrip()
@@ -346,7 +347,7 @@ def build() -> str:
         y = row["y"]
         rid = row["id"]
         char_w, die_w, gap = 8.4, 16, 4
-        top = y - 10
+        top = y - 13
         icon = d20_icon()
         x = BAR_X
         parts = []
