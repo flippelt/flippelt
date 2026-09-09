@@ -358,21 +358,35 @@ def build() -> str:
         return polys
 
     def flanked_note(row: dict) -> str:
-        # One d20 on each end of the note: [die] # shiny math rocks [die]
-        text = row["note"]
+        # # [d20] shiny math rocks [d20] — dice after the hash, one on each end.
+        raw = row["note"]
+        if raw.startswith("#"):
+            prefix, body = "#", raw[1:].lstrip()
+        else:
+            prefix, body = "", raw
         y = row["y"]
         rid = row["id"]
-        die_w, gap = 16, 5
+        char_w, die_w, gap = 8.4, 16, 4
         top = y - 16
-        text_x = BAR_X + die_w + gap
-        right_x = text_x + round(len(text) * 8.4) + gap
-        return (
-            f'      <g class="note note-{rid}" transform="translate({BAR_X} {top})">'
-            f"{d20_icon('a')}</g>\n"
-            f'      <text x="{text_x}" y="{y}" class="term note note-{rid}">{esc(text)}</text>\n'
-            f'      <g class="note note-{rid}" transform="translate({right_x} {top})">'
-            f"{d20_icon('b')}</g>\n"
+        x = BAR_X
+        parts = []
+        if prefix:
+            parts.append(
+                f'      <text x="{x:.0f}" y="{y}" class="term note note-{rid}">{esc(prefix)}</text>'
+            )
+            x += len(prefix) * char_w + gap
+        parts.append(
+            f'      <g class="note note-{rid}" transform="translate({x:.0f} {top})">{d20_icon("a")}</g>'
         )
+        x += die_w + gap
+        parts.append(
+            f'      <text x="{x:.0f}" y="{y}" class="term note note-{rid}">{esc(body)}</text>'
+        )
+        x += len(body) * char_w + gap
+        parts.append(
+            f'      <g class="note note-{rid}" transform="translate({x:.0f} {top})">{d20_icon("b")}</g>'
+        )
+        return "\n".join(parts) + "\n"
 
     def note(row: dict) -> str:
         if row.get("ribbon"):
