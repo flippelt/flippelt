@@ -312,18 +312,50 @@ def build() -> str:
             f'      </g>\n'
         )
 
-    def d20_icon() -> str:
-        # Hex icosahedron, ~16px, no face number. Fills on the polygons so
-        # .note { fill } on the parent does not grey them out.
-        return (
-            '<polygon fill="#4a0f12" points="8,0.3 15.1,4.2 15.1,11.8 8,15.7 0.9,11.8 0.9,4.2"/>'
-            '<polygon fill="#f85149" points="8,0.5 14.8,4.2 8,8"/>'
-            '<polygon fill="#da3633" points="8,0.5 1.2,4.2 8,8"/>'
-            '<polygon fill="#c62828" points="14.8,4.2 14.8,11.8 8,8"/>'
-            '<polygon fill="#9e1a1a" points="1.2,4.2 1.2,11.8 8,8"/>'
-            '<polygon fill="#b62324" points="14.8,11.8 8,15.5 8,8"/>'
-            '<polygon fill="#6e1014" points="1.2,11.8 8,15.5 8,8"/>'
+    def d20_icon(kind: str = "a") -> str:
+        # Orthographic icosahedron (16x20), no face number. A regular hex of
+        # 6 triangles reads as an isometric cube at this size; these are
+        # real 20-face projections. Fills on the polygons so .note { fill }
+        # on the parent does not grey them out.
+        faces_a = (
+            "14.23,14.47 8.35,9.73 5.67,17.07",
+            "14.23,14.47 14.39,5.53 8.35,9.73",
+            "1.61,14.47 5.67,17.07 0.55,9.73",
+            "5.94,2.60 1.77,5.53 0.55,9.73",
+            "10.33,2.93 5.94,2.60 14.39,5.53",
+            "10.06,17.40 1.61,14.47 5.67,17.07",
+            "10.33,2.93 5.94,2.60 1.77,5.53",
+            "10.33,2.93 15.45,10.27 14.39,5.53",
+            "7.65,10.27 1.77,5.53 1.61,14.47",
+            "7.65,10.27 10.33,2.93 1.77,5.53",
         )
+        fills_a = (
+            "#f65249", "#ce413b", "#9d2b2a", "#791c1d", "#791c1d",
+            "#791c1d", "#f45148", "#9d2b2a", "#ce413b", "#f65249",
+        )
+        faces_b = (
+            "11.47,15.35 14.30,7.23 6.59,8.82",
+            "11.47,15.35 6.59,8.82 2.97,15.35",
+            "13.03,4.65 7.55,2.21 14.30,7.23",
+            "1.70,12.77 2.97,15.35 0.55,7.23",
+            "15.45,12.77 11.47,15.35 8.45,17.79",
+            "13.03,4.65 15.45,12.77 14.30,7.23",
+            "8.45,17.79 1.70,12.77 2.97,15.35",
+            "13.03,4.65 7.55,2.21 4.53,4.65",
+            "9.41,11.18 13.03,4.65 4.53,4.65",
+            "9.41,11.18 4.53,4.65 1.70,12.77",
+        )
+        fills_b = (
+            "#d7443e", "#e24942", "#791c1d", "#791c1d", "#e84c44",
+            "#791c1d", "#791c1d", "#ed4e46", "#e24942", "#d7443e",
+        )
+        faces, fills = (faces_a, fills_a) if kind == "a" else (faces_b, fills_b)
+        polys = "".join(
+            f'<polygon fill="{fill}" stroke="#2a0709" stroke-width="0.5" '
+            f'stroke-linejoin="round" points="{pts}"/>'
+            for fill, pts in zip(fills, faces)
+        )
+        return polys
 
     def flanked_note(row: dict) -> str:
         # One d20 on each end of the note: [die] # shiny math rocks [die]
@@ -331,18 +363,15 @@ def build() -> str:
         y = row["y"]
         rid = row["id"]
         die_w, gap = 16, 5
-        top = y - 13
+        top = y - 16
         text_x = BAR_X + die_w + gap
         right_x = text_x + round(len(text) * 8.4) + gap
-        icon = d20_icon()
         return (
-            f'      <g class="note note-{rid}" transform="translate({BAR_X} {top})">\n'
-            f'        <g transform="rotate(-16 8 8)">{icon}</g>\n'
-            f'      </g>\n'
+            f'      <g class="note note-{rid}" transform="translate({BAR_X} {top})">'
+            f"{d20_icon('a')}</g>\n"
             f'      <text x="{text_x}" y="{y}" class="term note note-{rid}">{esc(text)}</text>\n'
-            f'      <g class="note note-{rid}" transform="translate({right_x} {top})">\n'
-            f'        <g transform="rotate(14 8 8)">{icon}</g>\n'
-            f'      </g>\n'
+            f'      <g class="note note-{rid}" transform="translate({right_x} {top})">'
+            f"{d20_icon('b')}</g>\n"
         )
 
     def note(row: dict) -> str:
