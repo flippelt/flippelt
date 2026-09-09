@@ -2,6 +2,10 @@
   <img src="assets/boot.svg" alt="Terminal: $ whoami and ./boot.sh; then $ brew install rpg human humor sarcasm brain creativity daughter adhd thinking-outside-the-box dice-goblin; then $ cat felipe.ts prints const felipe_lippelt: Dev = { pronouns, role, location, langs, code, tools, focus, learning }" width="720"/>
 </p>
 
+<p align="center"><sub>
+  <a href="https://github.com/flippelt/readme-term">use this template</a>
+</sub></p>
+
 <p align="center"><em>
   developer in training · helpdesk @ <a href="https://icl.com.br">ICL</a> · 📍 São Paulo, BR 🇧🇷
 </em></p>
