@@ -152,7 +152,7 @@ def build() -> str:
         dict(id="daughter", label=f"Bottle daughter ({kid})",               t0=4.35, t1=6.20, stall=None, reverse=False, adhd=False, note="# unplanned feature"),
         dict(id="adhd",    label="Bottle adhd (0.4.1)",                     t0=4.35, t1=5.15, stall=None, reverse=False, adhd=True,  note=None, ribbon=True),
         dict(id="totb",    label="Bottle thinking-outside-the-box (0.1.0)", t0=4.35, t1=7.35, stall=None, reverse=True,  adhd=False, note="# poured sideways"),
-        dict(id="goblin",  label="Bottle dice-goblin (13.0.0)",             t0=4.35, t1=6.65, stall=None, reverse=False, adhd=False, note="# shiny math rocks"),
+        dict(id="goblin",  label="Bottle dice-goblin (13.0.0)",             t0=4.35, t1=6.65, stall=None, reverse=False, adhd=False, note="# shiny math rocks", d20=True),
     ]
     for i, p in enumerate(packages):
         p["y"] = bottle_y0 + i * bottle_dy
@@ -312,15 +312,45 @@ def build() -> str:
             f'      </g>\n'
         )
 
+    def d20_icon() -> str:
+        # Hex icosahedron, ~16px. Fills on the polygons (not the group) so
+        # .note { fill } on the parent does not grey them out.
+        return (
+            '<polygon fill="#4a0f12" points="8,0.3 15.1,4.2 15.1,11.8 8,15.7 0.9,11.8 0.9,4.2"/>'
+            '<polygon fill="#f85149" points="8,0.5 14.8,4.2 8,8"/>'
+            '<polygon fill="#da3633" points="8,0.5 1.2,4.2 8,8"/>'
+            '<polygon fill="#c62828" points="14.8,4.2 14.8,11.8 8,8"/>'
+            '<polygon fill="#9e1a1a" points="1.2,4.2 1.2,11.8 8,8"/>'
+            '<polygon fill="#b62324" points="14.8,11.8 8,15.5 8,8"/>'
+            '<polygon fill="#6e1014" points="1.2,11.8 8,15.5 8,8"/>'
+            '<text x="8" y="9.7" text-anchor="middle" fill="#fff5f5" font-size="5.2" '
+            'font-family="Menlo, ui-monospace, monospace" font-weight="700">20</text>'
+        )
+
+    def red_d20s(row_id: str, text_x: int, y: int, text: str) -> str:
+        # 14px mono ≈ 0.6em advance; gap after the note.
+        x0 = text_x + round(len(text) * 8.4) + 8
+        top = y - 13
+        icon = d20_icon()
+        return (
+            f'      <g class="note note-{row_id}" transform="translate({x0} {top})">\n'
+            f'        <g transform="rotate(-16 8 8)">{icon}</g>\n'
+            f'        <g transform="translate(15 1) rotate(14 8 8)">{icon}</g>\n'
+            f'      </g>\n'
+        )
+
     def note(row: dict) -> str:
         if row.get("ribbon"):
             return orange_ribbon(row["id"], BAR_X, row["y"])
         if not row.get("note"):
             return ""
-        return (
+        out = (
             f'      <text x="{BAR_X}" y="{row["y"]}" class="term note note-{row["id"]}">'
             f'{esc(row["note"])}</text>\n'
         )
+        if row.get("d20"):
+            out += red_d20s(row["id"], BAR_X, row["y"], row["note"])
+        return out
 
     def row_group(row: dict, ln_class: str) -> str:
         body = [
