@@ -335,7 +335,7 @@ def build() -> str:
         return (
             f'      <g class="note note-{row_id}" transform="translate({x0} {top})">\n'
             f'        <g transform="rotate(-16 8 8)">{icon}</g>\n'
-            f'        <g transform="translate(15 1) rotate(14 8 8)">{icon}</g>\n'
+            f'        <g transform="translate(15 0) rotate(14 8 8)">{icon}</g>\n'
             f'      </g>\n'
         )
 
