@@ -152,7 +152,7 @@ def build() -> str:
         dict(id="daughter", label=f"Bottle daughter ({kid})",               t0=4.35, t1=6.20, stall=None, reverse=False, adhd=False, note="# unplanned feature"),
         dict(id="adhd",    label="Bottle adhd (0.4.1)",                     t0=4.35, t1=5.15, stall=None, reverse=False, adhd=True,  note=None, ribbon=True),
         dict(id="totb",    label="Bottle thinking-outside-the-box (0.1.0)", t0=4.35, t1=7.35, stall=None, reverse=True,  adhd=False, note="# poured sideways"),
-        dict(id="goblin",  label="Bottle dice-goblin (13.0.0)",             t0=4.35, t1=6.65, stall=None, reverse=False, adhd=False, note="# shiny math rocks"),
+        dict(id="goblin",  label="Bottle dice-goblin (13.0.0)",             t0=4.35, t1=6.65, stall=None, reverse=False, adhd=False, note="# shiny math rocks", d20=True),
     ]
     for i, p in enumerate(packages):
         p["y"] = bottle_y0 + i * bottle_dy
@@ -312,11 +312,70 @@ def build() -> str:
             f'      </g>\n'
         )
 
+    def d20_icon() -> str:
+        # Binding of Isaac D20: 2D hex + triangle mesh, no face number.
+        # Flat fills on the polygons so .note { fill } does not grey them out.
+        stroke = 'stroke="#3d0a0c" stroke-width="0.55" stroke-linejoin="round"'
+        faces = (
+            ("#e53935", "8,0.7 0.9,4.9 8,5.1"),
+            ("#ef5350", "8,0.7 15.1,4.9 8,5.1"),
+            ("#c62828", "0.9,4.9 8,5.1 4.1,11.5"),
+            ("#d32f2f", "15.1,4.9 8,5.1 11.9,11.5"),
+            ("#e53935", "8,5.1 4.1,11.5 11.9,11.5"),
+            ("#8e1518", "0.9,4.9 0.9,13.1 4.1,11.5"),
+            ("#9a181c", "15.1,4.9 15.1,13.1 11.9,11.5"),
+            ("#7a1014", "0.9,13.1 8,17.3 4.1,11.5"),
+            ("#6d0e12", "15.1,13.1 8,17.3 11.9,11.5"),
+            ("#8e1518", "4.1,11.5 11.9,11.5 8,17.3"),
+        )
+        polys = "".join(
+            f'<polygon fill="{fill}" {stroke} points="{pts}"/>'
+            for fill, pts in faces
+        )
+        return polys + '<polygon fill="#ffcdd2" points="7.2,1.8 8.8,1.8 7.6,3.4"/>'
+
+    def flanked_note(row: dict) -> str:
+        # # [d20] shiny math rocks [d20] — dice after the hash, one on each end.
+        # Die bbox y 0.7..17.3 (center 9). 14px text optical center ~4px above
+        # baseline; y-13 sits on the line without hanging from the cap or
+        # dropping below the x-height.
+        raw = row["note"]
+        if raw.startswith("#"):
+            prefix, body = "#", raw[1:].lstrip()
+        else:
+            prefix, body = "", raw
+        y = row["y"]
+        rid = row["id"]
+        char_w, die_w, gap = 8.4, 16, 4
+        top = y - 13
+        icon = d20_icon()
+        x = BAR_X
+        parts = []
+        if prefix:
+            parts.append(
+                f'      <text x="{x:.0f}" y="{y}" class="term note note-{rid}">{esc(prefix)}</text>'
+            )
+            x += len(prefix) * char_w + gap
+        parts.append(
+            f'      <g class="note note-{rid}" transform="translate({x:.0f} {top})">{icon}</g>'
+        )
+        x += die_w + gap
+        parts.append(
+            f'      <text x="{x:.0f}" y="{y}" class="term note note-{rid}">{esc(body)}</text>'
+        )
+        x += len(body) * char_w + gap
+        parts.append(
+            f'      <g class="note note-{rid}" transform="translate({x:.0f} {top})">{icon}</g>'
+        )
+        return "\n".join(parts) + "\n"
+
     def note(row: dict) -> str:
         if row.get("ribbon"):
             return orange_ribbon(row["id"], BAR_X, row["y"])
         if not row.get("note"):
             return ""
+        if row.get("d20"):
+            return flanked_note(row)
         return (
             f'      <text x="{BAR_X}" y="{row["y"]}" class="term note note-{row["id"]}">'
             f'{esc(row["note"])}</text>\n'
