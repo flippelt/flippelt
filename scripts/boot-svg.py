@@ -313,72 +313,44 @@ def build() -> str:
         )
 
     def d20_icon() -> str:
-        # Binding of Isaac D20: 2D hex + triangle mesh, no face number.
-        # Flat fills on the polygons so .note { fill } does not grey them out.
-        stroke = 'stroke="#3d0a0c" stroke-width="0.55" stroke-linejoin="round"'
-        faces = (
-            ("#e53935", "8,0.7 0.9,4.9 8,5.1"),
-            ("#ef5350", "8,0.7 15.1,4.9 8,5.1"),
-            ("#c62828", "0.9,4.9 8,5.1 4.1,11.5"),
-            ("#d32f2f", "15.1,4.9 8,5.1 11.9,11.5"),
-            ("#e53935", "8,5.1 4.1,11.5 11.9,11.5"),
-            ("#8e1518", "0.9,4.9 0.9,13.1 4.1,11.5"),
-            ("#9a181c", "15.1,4.9 15.1,13.1 11.9,11.5"),
-            ("#7a1014", "0.9,13.1 8,17.3 4.1,11.5"),
-            ("#6d0e12", "15.1,13.1 8,17.3 11.9,11.5"),
-            ("#8e1518", "4.1,11.5 11.9,11.5 8,17.3"),
+        # Hex icosahedron, ~16px. Fills on the polygons (not the group) so
+        # .note { fill } on the parent does not grey them out.
+        return (
+            '<polygon fill="#4a0f12" points="8,0.3 15.1,4.2 15.1,11.8 8,15.7 0.9,11.8 0.9,4.2"/>'
+            '<polygon fill="#f85149" points="8,0.5 14.8,4.2 8,8"/>'
+            '<polygon fill="#da3633" points="8,0.5 1.2,4.2 8,8"/>'
+            '<polygon fill="#c62828" points="14.8,4.2 14.8,11.8 8,8"/>'
+            '<polygon fill="#9e1a1a" points="1.2,4.2 1.2,11.8 8,8"/>'
+            '<polygon fill="#b62324" points="14.8,11.8 8,15.5 8,8"/>'
+            '<polygon fill="#6e1014" points="1.2,11.8 8,15.5 8,8"/>'
+            '<text x="8" y="9.7" text-anchor="middle" fill="#fff5f5" font-size="5.2" '
+            'font-family="Menlo, ui-monospace, monospace" font-weight="700">20</text>'
         )
-        polys = "".join(
-            f'<polygon fill="{fill}" {stroke} points="{pts}"/>'
-            for fill, pts in faces
-        )
-        return polys + '<polygon fill="#ffcdd2" points="7.2,1.8 8.8,1.8 7.6,3.4"/>'
 
-    def flanked_note(row: dict) -> str:
-        # # [d20] shiny math rocks [d20] — dice after the hash, one on each end.
-        # Die is top-heavy (Isaac hex). 14px text sits ~11px above baseline;
-        # y-10 puts the body of the die on the x-height instead of the cap.
-        raw = row["note"]
-        if raw.startswith("#"):
-            prefix, body = "#", raw[1:].lstrip()
-        else:
-            prefix, body = "", raw
-        y = row["y"]
-        rid = row["id"]
-        char_w, die_w, gap = 8.4, 16, 4
-        top = y - 10
+    def red_d20s(row_id: str, text_x: int, y: int, text: str) -> str:
+        # 14px mono ≈ 0.6em advance; gap after the note.
+        x0 = text_x + round(len(text) * 8.4) + 8
+        top = y - 13
         icon = d20_icon()
-        x = BAR_X
-        parts = []
-        if prefix:
-            parts.append(
-                f'      <text x="{x:.0f}" y="{y}" class="term note note-{rid}">{esc(prefix)}</text>'
-            )
-            x += len(prefix) * char_w + gap
-        parts.append(
-            f'      <g class="note note-{rid}" transform="translate({x:.0f} {top})">{icon}</g>'
+        return (
+            f'      <g class="note note-{row_id}" transform="translate({x0} {top})">\n'
+            f'        <g transform="rotate(-16 8 8)">{icon}</g>\n'
+            f'        <g transform="translate(15 1) rotate(14 8 8)">{icon}</g>\n'
+            f'      </g>\n'
         )
-        x += die_w + gap
-        parts.append(
-            f'      <text x="{x:.0f}" y="{y}" class="term note note-{rid}">{esc(body)}</text>'
-        )
-        x += len(body) * char_w + gap
-        parts.append(
-            f'      <g class="note note-{rid}" transform="translate({x:.0f} {top})">{icon}</g>'
-        )
-        return "\n".join(parts) + "\n"
 
     def note(row: dict) -> str:
         if row.get("ribbon"):
             return orange_ribbon(row["id"], BAR_X, row["y"])
         if not row.get("note"):
             return ""
-        if row.get("d20"):
-            return flanked_note(row)
-        return (
+        out = (
             f'      <text x="{BAR_X}" y="{row["y"]}" class="term note note-{row["id"]}">'
             f'{esc(row["note"])}</text>\n'
         )
+        if row.get("d20"):
+            out += red_d20s(row["id"], BAR_X, row["y"], row["note"])
+        return out
 
     def row_group(row: dict, ln_class: str) -> str:
         body = [
