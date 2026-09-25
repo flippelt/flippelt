@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/boot.svg" alt="Terminal: $ whoami and ./boot.sh; then $ brew install rpg human humor sarcasm brain creativity daughter adhd thinking-outside-the-box dice-goblin; then $ cat felipe.ts prints const felipe_lippelt: Dev = { pronouns, role, location, langs, code, tools, focus, learning }" width="720"/>
+  <img src="assets/boot.svg" alt="pronouns: he/him; role: helpdesk analyst @ ICL; location: São Paulo, BR; langs: pt-BR, en; code: TypeScript, JavaScript, Rust, Python, Dart; tools: React, Node.js, Astro, Vite, Socket.io; focus: TTRPG tooling — VTTs, immersive props, SRDs as code; learning: Rust + TTRPG system design" width="720"/>
 </p>
 
 <p align="center"><sub>
